@@ -5,16 +5,16 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Component Imports
-import CallToAction from '../components/CallToAction.astro';
-import Grid from '../components/Grid.astro';
-import Hero from '../components/Hero.astro';
-import Icon from '../components/Icon.astro';
-import Pill from '../components/Pill.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
+import CallToAction from '../components/atoms/CallToAction.astro';
+import Grid from '../components/molecules/Grid.astro';
+import Hero from '../components/organisms/Hero.astro';
+import Icon from '../components/atoms/Icon.astro';
+import Pill from '../components/atoms/Pill.astro';
+import PortfolioPreview from '../components/molecules/PortfolioPreview.astro';
 
 // Page section components
-import ContactCTA from '../components/ContactCTA.astro';
-import Skills from '../components/Skills.astro';
+import ContactCTA from '../components/molecules/ContactCTA.astro';
+import Skills from '../components/organisms/Skills.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
