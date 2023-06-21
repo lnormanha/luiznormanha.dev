@@ -2,11 +2,15 @@
 import Icon, { Props as IconProps } from '@components/atoms/Icon.astro';
 import ThemeToggle from '@components/atoms/ThemeToggle.astro';
 
+import i18nStrings from "../../i18n"
+
+const locale = Astro.url.pathname.slice(1, 3) === "pt" ? "pt" : "en"
+
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
-	{ label: 'About', href: '/about/' },
+	{ label: i18nStrings[locale].tabs.home, href: locale === "pt" ? "/pt/" : '/' },
+	{ label: i18nStrings[locale].tabs.work, href: locale === "pt" ? "/pt/work/" : '/work/'  },
+	{ label: i18nStrings[locale].tabs.about, href: locale === "pt" ? "/pt/about/" : '/about/'  },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -46,8 +50,8 @@ const iconLinks: { label: string; href: string; icon: IconProps['icon'] }[] = [
 								'link',
 								{
 									active:
-										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										 Astro.url.pathname === href
+										// (href !== '/' && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
