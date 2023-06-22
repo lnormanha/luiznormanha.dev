@@ -5,7 +5,8 @@ interface LocaleStrings {
   [key: string]: {
     tabs: {
       home: string;
-      work: string;
+      experience: string;
+      projects: string;
       about: string;
     };
   };
