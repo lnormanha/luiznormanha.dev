@@ -1,62 +1,163 @@
 ---
-import Icon from '@components/atoms/Icon.astro';
+import Icon from "@components/atoms/Icon.astro";
+import Pill from "@components/atoms/Pill.astro";
 ---
 
-<section class="box skills">
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
-	</div>
-	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
-	</div>
+<section class="container">
+  <h2>Main Skills</h2>
+  <h5>
+    Skills that I mainly use on my current workflow and past work experiences.
+  </h5>
+
+  <h4>Front-end</h4>
+
+  <section class="box skills">
+    <div class="stack gap-2 lg:gap-3">
+      <h2>React</h2>
+      <p>5+ years</p>
+    </div>
+    <div class="stack gap-2 lg:gap-3">
+      <h2>React Native</h2>
+      <p>5+ years</p>
+    </div>
+    <div class="stack gap-2 lg:gap-3">
+      <h2>Next.js</h2>
+      <p>3+ years</p>
+    </div>
+    <div class="stack gap-2 lg:gap-3">
+      <h2>JavaScript</h2>
+      <p>5+ years</p>
+    </div>
+    <div class="stack gap-2 lg:gap-3">
+      <h2>TypeScript</h2>
+      <p>3+ years</p>
+    </div>
+  </section>
+
+  <h4>Back-end</h4>
+
+  <section class="box skills three-col">
+    <div class="stack gap-2 lg:gap-3">
+      <h2>Nest.js</h2>
+      <p>1 year</p>
+    </div>
+    <div class="stack gap-2 lg:gap-3">
+      <h2>Express</h2>
+      <p>3+ years</p>
+    </div>
+    <div class="stack gap-2 lg:gap-3">
+      <h2>Payload CMS</h2>
+      <p>1 year</p>
+    </div>
+  </section>
+
+  <h4>Extras</h4>
+  <section class="extra-skills">
+    <Pill>SCRUM</Pill>
+    <Pill>Git</Pill>
+    <Pill>AWS</Pill>
+    <Pill>GraphQL</Pill>
+    <Pill>MongoDB</Pill>
+    <Pill>Redux</Pill>
+    <Pill>Zustand</Pill>
+    <Pill>styled-components</Pill>
+    <Pill>CSS</Pill>
+    <Pill>Astro</Pill>
+    <Pill>Figma</Pill>
+  </section>
+
+  <h4>Languages</h4>
+  <section class="language-skills">
+    <div class="lang-col">
+      <h5>English</h5>
+      <p>Advanced</p>
+    </div>
+    <div class="lang-col">
+      <h5>Portuguese (BR)</h5>
+      <p>Native</p>
+    </div>
+  </section>
 </section>
 
 <style>
-	.box {
-		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
-		padding: 1.5rem;
-		background-color: var(--gray-999_40);
-		box-shadow: var(--shadow-sm);
-	}
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
-	.skills {
-		display: flex;
-		flex-direction: column;
-		gap: 3rem;
-	}
+  .box {
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+  }
 
-	.skills h2 {
-		font-size: var(--text-lg);
-	}
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 
-	.skills p {
-		color: var(--gray-400);
-	}
+  .skills h2 {
+    font-size: var(--text-lg);
+  }
 
-	@media (min-width: 50em) {
-		.box {
-			border-radius: 1.5rem;
-			padding: 2.5rem;
-		}
+  .skills p {
+    font-size: var(--text-md);
+    color: var(--gray-400);
+  }
 
-		.skills {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 5rem;
-		}
+  .extra-skills {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
 
-		.skills h2 {
-			font-size: var(--text-2xl);
-		}
-	}
+  .language-skills {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .lang-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    background-color: var(--gray-999_40);
+    box-shadow: var(--shadow-sm);
+    gap: 0.5rem;
+  }
+
+  .lang-col p {
+    font-size: var(--text-md);
+  }
+
+  @media (min-width: 50em) {
+    .box {
+      border-radius: 1.5rem;
+      padding: 1rem;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5rem;
+    }
+
+    .three-columns: {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .skills h2 {
+      font-size: var(--text-xl);
+    }
+  }
 </style>
