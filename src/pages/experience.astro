@@ -8,31 +8,25 @@ import PortfolioPreview from "@components/molecules/PortfolioPreview.astro";
 import Hero from "@components/organisms/Hero.astro";
 import Grid from "@components/atoms/Grid.astro";
 
-const projects = await getCollection("work", ({ id }) => {
-  return id.startsWith("nested");
-});
+const projects = (
+  await getCollection("experience", ({ id }) => {
+    return id.startsWith("en");
+  })
+).sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf());
 ---
 
 <BaseLayout
-  title="Experiences | Luiz Normanha"
-  description="Learn about Luiz Normanha's experiences"
+  title="My Experience | Luiz Normanha"
+  description="Learn about Jeanine White's most recent projects"
 >
   <div class="stack gap-20">
     <main class="wrapper stack gap-8">
       <Hero
         title="Experiences"
-        tagline="See my most recent projects below to get an idea of my past experience."
+        tagline="Take a look at my past work experiences to know more about my career"
         align="start"
       />
-      <Grid variant="offset">
-        {
-          projects.map((project) => (
-            <li>
-              <PortfolioPreview project={project} />
-            </li>
-          ))
-        }
-      </Grid>
+      {projects.map((project) => <PortfolioPreview project={project} />)}
     </main>
     <ContactCTA />
   </div>
