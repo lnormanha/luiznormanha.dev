@@ -51,6 +51,19 @@
 		var(--accent-dark)
 	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-900), var(--gray-700));
+	--gradient-bg: linear-gradient(
+		180deg,
+		var(--gradient-stop-1) 0%,
+		var(--gray-900) 10%,
+		var(--gray-900) 20%,
+		var(--gray-900) 30%,
+		var(--gray-900) 40%,
+		var(--gray-900) 50%,
+		var(--gray-900) 60%,
+		var(--gray-900) 70%,
+		var(--gray-900) 80%,
+		var(--gradient-stop-1) 90%
+		);
 
 	/* Shadows */
 	--shadow-sm: 0px 6px 3px rgba(9, 11, 17, 0.01), 0px 4px 2px rgba(9, 11, 17, 0.01),
@@ -106,6 +119,8 @@
 	--link-color: var(--gray-0);
 
 	--gradient-stop-1: var(--gray-0);
+	--gradient-stop-2: var(--accent-regular);
+	--gradient-stop-3: var(--accent-dark);
 	--gradient-subtle: linear-gradient(150deg, var(--gray-900) 19%, var(--gray-999) 81%);
 	--gradient-accent-orange: linear-gradient(
 		150deg,
@@ -114,6 +129,19 @@
 		var(--accent-light)
 	);
 	--gradient-stroke: linear-gradient(180deg, var(--gray-600), var(--gray-800));
+	--gradient-bg: linear-gradient(
+		180deg,
+		var(--gradient-stop-3) 0%,
+		var(--gray-900) 10%,
+		var(--gray-900) 20%,
+		var(--gray-900) 30%,
+		var(--gray-900) 40%,
+		var(--gray-900) 50%,
+		var(--gray-900) 60%,
+		var(--gray-900) 70%,
+		var(--gray-900) 80%,
+		var(--gradient-stop-3) 90%
+		);
 
 	--shadow-sm: 0px 6px 3px rgba(255, 255, 255, 0.01), 0px 4px 2px rgba(255, 255, 255, 0.01),
 		0px 2px 2px rgba(255, 255, 255, 0.02), 0px 0px 1px rgba(255, 255, 255, 0.03);
