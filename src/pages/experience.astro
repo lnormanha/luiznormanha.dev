@@ -8,6 +8,10 @@ import PortfolioPreview from "@components/molecules/PortfolioPreview.astro";
 import Hero from "@components/organisms/Hero.astro";
 import Grid from "@components/atoms/Grid.astro";
 
+import i18nStrings from "@i18n";
+
+const locale = Astro.url.pathname.slice(1, 3) === "pt" ? "pt" : "en";
+
 const projects = (
   await getCollection("experience", ({ id }) => {
     return id.startsWith("en");
@@ -17,13 +21,13 @@ const projects = (
 
 <BaseLayout
   title="My Experience | Luiz Normanha"
-  description="Learn about Jeanine White's most recent projects"
+  description={"Learn about Luiz Normanha most recent projects"}
 >
   <div class="stack gap-20">
     <main class="wrapper stack gap-8">
       <Hero
-        title="Experiences"
-        tagline="Take a look at my past work experiences to know more about my career"
+        title={i18nStrings[locale].home["experiences-section"].title}
+        tagline={i18nStrings[locale].home["experiences-section"].subtitle}
         align="start"
       />
       {projects.map((project) => <PortfolioPreview project={project} />)}

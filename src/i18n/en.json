@@ -2,7 +2,57 @@
   "tabs": {
     "home": "Home",
     "experience": "Experience",
-    "projects": "Projects",
     "about": "About"
+  },
+  "buttons": {
+    "about-me": "About me",
+    "view-all": "View all",
+    "send-message": "Send Me a Message"
+  },
+  "footer": {
+    "tagline": "Interested in working together?",
+    "developed-with": "Developed with"
+  },
+  "home": {
+    "title": "Hello, my name is Luiz Normanha and I'm a Software Developer",
+    "subtitle": "I'm a developer based in Brazil, passionate with all things related to programming, working mainly with Front-end Development using React and React Native.",
+    "stacks-section": {
+      "title": "Stacks and Skills",
+      "subtitle": "Stacks and skills that I use on my current workflow and past work experiences.",
+      "years": "years",
+      "languages": "Languages",
+      "english": "English",
+      "portuguese": "Portuguese (BR)",
+      "advanced": "Advanced",
+      "native": "Native"
+    },
+    "experiences-section": {
+      "title": "Experiences",
+      "subtitle": "Take a look at my past work experiences to know more about my career."
+    }
+  },
+  "about": {
+    "title": "About",
+    "profile": {
+      "label": "Profile",
+      "description": [
+        "Hi there, I'm Luiz! As a developer, I continuously strive to discover the most effective patterns and methods for crafting clean, readable code that's easily understood by my teammates",
+        "I am highly motivated to support my team in achieving its objectives and providing any necessary assistance along the way",
+        "I firmly believe that in a team environment, we all learn and grow together throughout the journey. :)"
+      ]
+    },
+    "background": {
+      "label": "Background",
+      "description": [
+        "I have been working as a Front-end Developer since 2018, focusing on React / React Native, using JS and TS. In my journey, I have worked on various types of projects, from the conception of projects from scratch to the maintenance of large projects in production.",
+        "I also have knowledge in Back-end and CI/CD, and I am always willing to learn new technologies that are necessary to deliver various types of projects."
+      ]
+    },
+    "education": {
+      "label": "Education",
+      "description": [
+        "Bachelor’s degree in Software Engineering - UNIFAE 2014-2018"
+      ]
+    }
   }
 }

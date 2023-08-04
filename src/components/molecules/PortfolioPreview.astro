@@ -24,12 +24,12 @@ const months = [
 ];
 ---
 
-<a class="card" href={`/experience/${slug}/`}>
+<a class="card">
   <div class="content">
     <div class="work-period">
       <img src={data.img} />
       <span class="title">{data.title}</span>
-      <span>|</span>
+      <span style="color: var(--gray-200);">|</span>
       <span class="time">{months[new Date(data.startDate).getMonth()]}</span>
       <span class="time">{new Date(data.startDate).getFullYear()}</span>
       <span class="time">-</span>
@@ -94,15 +94,18 @@ const months = [
 
     .time {
       font-size: var(--text-lg);
+      color: var(--gray-200);
     }
 
     .description {
       font-size: var(--text-lg);
       margin: 1rem 0;
+      color: var(--gray-200);
     }
 
     .summary-topic {
       font-size: var(--text-md);
+      color: var(--gray-200);
     }
 
     img {

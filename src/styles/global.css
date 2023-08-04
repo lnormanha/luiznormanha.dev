@@ -55,17 +55,6 @@
 		180deg,
 		var(--gradient-stop-1) 0%,
 		var(--gray-900) 10%,
-		var(--gray-900) 20%,
-		var(--gray-900) 30%,
-		var(--gray-900) 40%,
-		var(--gray-900) 50%,
-		var(--gray-900) 60%,
-		var(--gray-900) 70%,
-		var(--gray-900) 75%,
-		var(--gradient-stop-1) 83%,
-		var(--gradient-stop-1) 85%,
-		var(--gradient-stop-1) 90%,
-		var(--gradient-stop-1) 95%,
 		var(--gray-900) 100%
 		);
 
@@ -137,17 +126,6 @@
 		180deg,
 		var(--gradient-stop-3) 0%,
 		var(--gray-900) 10%,
-		var(--gray-900) 20%,
-		var(--gray-900) 30%,
-		var(--gray-900) 40%,
-		var(--gray-900) 50%,
-		var(--gray-900) 60%,
-		var(--gray-900) 70%,
-		var(--gray-900) 75%,
-		var(--gradient-stop-2) 83%,
-		var(--gradient-stop-2) 85%,
-		var(--gradient-stop-2) 90%,
-		var(--gradient-stop-2) 95%,
 		var(--gray-900) 100%
 		);
 

@@ -1,5 +1,6 @@
 ---
 import Icon, { Props as IconProps } from "@components/atoms/Icon.astro";
+import LanguageToggle from "@components/atoms/LanguageToggle.astro";
 import ThemeToggle from "@components/atoms/ThemeToggle.astro";
 
 import i18nStrings from "@i18n";
@@ -18,7 +19,7 @@ const textLinks: { label: string; href: string }[] = [
   // },
   {
     label: i18nStrings[locale].tabs.experience,
-    href: "/experience/",
+    href: locale === "pt" ? "/pt/experience/" : "/experience/",
   },
   {
     label: i18nStrings[locale].tabs.about,
@@ -28,16 +29,8 @@ const textLinks: { label: string; href: string }[] = [
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
-  { label: "Twitter", href: "https://twitter.com/me", icon: "twitter-logo" },
-  { label: "Twitch", href: "https://twitch.tv/me", icon: "twitch-logo" },
   { label: "GitHub", href: "https://github.com/me", icon: "github-logo" },
-  { label: "CodePen", href: "https://codepen.io/me", icon: "codepen-logo" },
-  { label: "dribbble", href: "https://dribbble.com/me", icon: "dribbble-logo" },
-  {
-    label: "YouTube",
-    href: "https://www.youtube.com/@me/",
-    icon: "youtube-logo",
-  },
+  { label: "LinkedIn", href: "https://github.com/me", icon: "linkedin-logo" },
 ];
 ---
 
@@ -71,9 +64,9 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
               class:list={[
                 "link",
                 {
-                  active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                  active: Astro.url.pathname === href,
+                  // Future implementation for markdown files
+                  // (href !== "/" && Astro.url.pathname.startsWith(href)),
                 },
               ]}
               href={href}
@@ -85,6 +78,9 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       }
     </ul>
     <div class="menu-footer">
+      <div class="languages">
+        <LanguageToggle />
+      </div>
       <div class="socials">
         {
           iconLinks.map(({ href, icon, label }) => (
@@ -247,7 +243,7 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     display: flex;
     padding: var(--icon-padding);
     text-decoration: none;
-    color: var(--accent-dark);
+    color: var(--accent-link-color);
     transition: color var(--theme-transition);
   }
 
@@ -286,8 +282,8 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
     .nav-items {
       position: relative;
       flex-direction: row;
-      font-size: var(--text-sm);
-      border-radius: 999rem;
+      font-size: var(--text-md);
+      border-radius: 0.5rem;
       border: 0;
       padding: 0.5rem 0.5625rem;
       background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
@@ -299,13 +295,13 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       inset: -1px;
       content: "";
       background: var(--gradient-stroke);
-      border-radius: 999rem;
+      border-radius: 0.5rem;
       z-index: -1;
     }
 
     .link {
       padding: 0.5rem 1rem;
-      border-radius: 999rem;
+      border-radius: 0.5rem;
       transition: color var(--theme-transition),
         background-color var(--theme-transition);
     }
