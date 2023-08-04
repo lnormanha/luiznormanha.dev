@@ -13,10 +13,6 @@ const textLinks: { label: string; href: string }[] = [
     label: i18nStrings[locale].tabs.home,
     href: locale === "pt" ? "/pt/" : "/",
   },
-  // {
-  //   label: i18nStrings[locale].tabs.projects,
-  //   href: locale === "pt" ? "/pt/work/" : "/work/",
-  // },
   {
     label: i18nStrings[locale].tabs.experience,
     href: locale === "pt" ? "/pt/experience/" : "/experience/",
@@ -78,9 +74,6 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
       }
     </ul>
     <div class="menu-footer">
-      <div class="languages">
-        <LanguageToggle />
-      </div>
       <div class="socials">
         {
           iconLinks.map(({ href, icon, label }) => (
@@ -91,7 +84,9 @@ const iconLinks: { label: string; href: string; icon: IconProps["icon"] }[] = [
           ))
         }
       </div>
-
+      <div class="languages">
+        <LanguageToggle />
+      </div>
       <div class="theme-toggle">
         <ThemeToggle />
       </div>
