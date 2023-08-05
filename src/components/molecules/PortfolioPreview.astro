@@ -1,6 +1,9 @@
 ---
 import Pill from "@components/atoms/Pill.astro";
 import type { CollectionEntry } from "astro:content";
+import i18nStrings from "@i18n";
+
+const locale = Astro.url.pathname.slice(1, 3) === "pt" ? "pt" : "en";
 
 interface Props {
   project: CollectionEntry<"experience">;
@@ -8,20 +11,36 @@ interface Props {
 
 const { data, slug } = Astro.props.project;
 
-const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
+const months = {
+  en: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ],
+  pt: [
+    "Janeiro",
+    "Fevereiro",
+    "Março",
+    "Abril",
+    "Maio",
+    "Junho",
+    "Julho",
+    "Agosto",
+    "Setembro",
+    "Outubro",
+    "Novembro",
+    "Dezembro",
+  ],
+};
 ---
 
 <a class="card">
@@ -29,107 +48,149 @@ const months = [
     <div class="work-period">
       <img src={data.img} />
       <span class="title">{data.title}</span>
-      <span style="color: var(--gray-200);">|</span>
-      <span class="time">{months[new Date(data.startDate).getMonth()]}</span>
-      <span class="time">{new Date(data.startDate).getFullYear()}</span>
-      <span class="time">-</span>
-      <span class="time">{months[new Date(data.endDate).getMonth()]}</span>
-      <span class="time">{new Date(data.endDate).getFullYear()}</span>
+      <span class="time-separator" style="color: var(--gray-200);">|</span>
+      <div class="time-content">
+        <span class="time"
+          >{months[locale][new Date(data.startDate).getMonth()]}</span
+        >
+        <span class="time">{new Date(data.startDate).getFullYear()}</span>
+        <span class="time">-</span>
+        <span class="time"
+          >{months[locale][new Date(data.endDate).getMonth()]}</span
+        >
+        <span class="time">{new Date(data.endDate).getFullYear()}</span>
+      </div>
     </div>
     <span class="description">{data.description}</span>
     {data.summary.map((topic) => <span class="summary-topic">- {topic}</span>)}
-    <h5>Stacks and Skills:</h5>
+    <h5>{i18nStrings[locale].home["stacks-section"].title}:</h5>
     <div class="skills">
       {data.skills.map((skill) => <Pill>{skill}</Pill>)}
     </div>
   </div>
+</a>
 
-  <style>
+<style>
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: var(--gradient-subtle);
+    border: 1px solid var(--gray-800);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    text-decoration: none;
+    font-family: var(--font-brand);
+    font-size: var(--text-lg);
+    font-weight: 500;
+    transition: box-shadow var(--theme-transition);
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .work-period {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .title {
+    z-index: 1;
+    color: var(--gray-200);
+  }
+
+  .time {
+    font-size: var(--text-lg);
+    color: var(--gray-200);
+  }
+
+  .time-separator {
+    display: none;
+  }
+
+  .time-content {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .description {
+    font-size: var(--text-lg);
+    margin: 1rem 0;
+    color: var(--gray-200);
+    text-align: center;
+  }
+
+  .summary-topic {
+    font-size: var(--text-md);
+    color: var(--gray-200);
+  }
+
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-md);
+    margin: 1rem 0;
+  }
+
+  h5 {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  @media (min-width: 50em) {
     .card {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      background: var(--gradient-subtle);
-      border: 1px solid var(--gray-800);
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      text-decoration: none;
-      font-family: var(--font-brand);
-      font-size: var(--text-lg);
-      font-weight: 500;
-      transition: box-shadow var(--theme-transition);
+      height: auto;
+      border-radius: 1.5rem;
     }
 
-    .card:hover {
-      box-shadow: var(--shadow-md);
-    }
-
-    .content {
-      display: flex;
-      flex-wrap: wrap;p
-      flex-direction: column;
-      margin: 0.5rem;
-      padding: 0.5rem 1rem;
-      gap: 0.5rem;
+    .title {
+      font-size: var(--text-xl);
     }
 
     .work-period {
       display: flex;
       flex-direction: row;
-      gap: 1rem;
       align-items: center;
+      gap: 0.5rem;
+    }
+    .time-separator {
+      display: contents;
     }
 
     .skills {
-      display: flex;
-      flex-direction: row;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .title {
-      z-index: 1;
-      color: var(--gray-200);
-    }
-
-    .time {
-      font-size: var(--text-lg);
-      color: var(--gray-200);
+      justify-content: start;
     }
 
     .description {
-      font-size: var(--text-lg);
-      margin: 1rem 0;
-      color: var(--gray-200);
-    }
-
-    .summary-topic {
-      font-size: var(--text-md);
-      color: var(--gray-200);
-    }
-
-    img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 1rem;
-      box-shadow: var(--shadow-md);
+      text-align: start;
     }
 
     h5 {
-      margin: 1rem 0;
+      text-align: start;
     }
-
-    @media (min-width: 50em) {
-      .card {
-        height: auto;
-        border-radius: 1.5rem;
-      }
-
-      .title {
-        font-size: var(--text-xl);
-      }
-    }
-  </style>
-</a>
+  }
+</style>

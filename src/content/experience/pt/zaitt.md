@@ -1,7 +1,7 @@
 ---
 title: Zaitt
-startDate: February 2018
-endDate: April 2019
+startDate: Fevereiro 2018
+endDate: Abril 2019
 img: /assets/logos/zaitt_logo.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |

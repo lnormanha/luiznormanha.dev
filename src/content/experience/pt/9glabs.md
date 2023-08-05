@@ -1,7 +1,7 @@
 ---
 title: 9GLabs
-startDate: April 2019
-endDate: February 2020
+startDate: Abril 2019
+endDate: Fevereiro 2020
 img: /assets/logos/9g_logo.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |

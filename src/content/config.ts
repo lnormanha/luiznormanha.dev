@@ -8,7 +8,7 @@ export const collections = {
       description: z.string(),
       summary: z.array(z.string()),
       startDate: z.coerce.date(),
-      endDate: z.coerce.date().optional() || z.string(),
+      endDate: z.coerce.date(),
       skills: z.array(z.string()),
       img: z.string(),
       img_alt: z.string().optional(),

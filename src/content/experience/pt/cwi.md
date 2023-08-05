@@ -1,7 +1,7 @@
 ---
 title: CWI Software
-startDate: March 2022
-endDate: January 2023
+startDate: Março 2022
+endDate: Janeiro 2023
 img: /assets/logos/cwi_logo.jpg
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |

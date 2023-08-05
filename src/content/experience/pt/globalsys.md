@@ -1,7 +1,7 @@
 ---
 title: Globalsys Soluções de TI
-startDate: February 2020
-endDate: June 2021
+startDate: Fevereiro 2020
+endDate: Junho 2021
 img: /assets/logos/globalsys_logo.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |
