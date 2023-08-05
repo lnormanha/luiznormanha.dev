@@ -1,0 +1,73 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 1.5rem;
+  background-color: var(--gray-999-basis);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  text-align: center;
+  max-width: 15ch;
+}
+
+.contact-cta {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.56em 2em;
+  gap: 0.8em;
+  color: var(--accent-text-over);
+  text-decoration: none;
+  line-height: 1.1;
+  border-radius: 999rem;
+  overflow: hidden;
+  background: var(--accent-dark);
+  box-shadow: var(--shadow-md);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media (min-width: 20em) {
+  .contact-cta {
+    font-size: var(--text-lg);
+  }
+}
+
+/* Overlay for hover effects. */
+.contact-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: background-color var(--theme-transition);
+  mix-blend-mode: overlay;
+}
+
+.contact-cta:focus::after,
+.contact-cta:hover::after {
+  background-color: hsla(var(--gray-999-basis), 0.3);
+}
+
+@media (min-width: 50em) {
+  aside {
+    padding: 7.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: var(--text-3xl);
+    text-align: left;
+  }
+
+  .contact-cta {
+    padding: 1.125rem 2.5rem;
+    font-size: var(--text-xl);
+  }
+}
