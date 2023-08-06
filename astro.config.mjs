@@ -23,7 +23,7 @@ export default defineConfig({
   integrations: [i18n({
     locales,
     defaultLocale,
-    include: ["pages/*.ts"]
+    exclude: ["pages/**/*.json.ts"]
   }), sitemap({
     i18n: {
       locales,

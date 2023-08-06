@@ -13,8 +13,6 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [isToasterOpen, setIsToasterOpen] = React.useState(false);
   const [toasterMessage, setToasterMessage] = React.useState("");
 
-  console.log({ isToasterOpen });
-
   React.useEffect(() => {
     const windowLocale =
       window.location.pathname.slice(1, 3) === "pt" ? "pt" : "en";

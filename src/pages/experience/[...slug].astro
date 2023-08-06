@@ -21,7 +21,6 @@ export async function getStaticPaths() {
   });
 
   return work.map((entry) => {
-    console.log({ entry });
     return {
       params: { slug: entry.slug },
       props: { entry },
