@@ -23,7 +23,8 @@ export default defineConfig({
   integrations: [i18n({
     locales,
     defaultLocale,
-    include: ["pages/**/*.json.ts"]
+    include: ["pages/api/**/*.json.ts"],
+    exclude: [],
   }), sitemap({
     i18n: {
       locales,
@@ -35,6 +36,5 @@ export default defineConfig({
   }), react()],
   adapter: vercel({
     includeFiles: ['./src/pages/api/send-email.json.ts'],
-
   }),
 });
