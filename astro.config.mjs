@@ -19,12 +19,10 @@ export default defineConfig({
   build: {
     format: "directory"
   },
-  output: "server",
+  output: "hybrid",
   integrations: [i18n({
     locales,
     defaultLocale,
-    include: ["pages/api/**/*.json.ts"],
-    exclude: [],
   }), sitemap({
     i18n: {
       locales,
