@@ -131,7 +131,7 @@ p {
 
 @media (min-width: 50em) {
   .modal {
-    height: 650px;
+    height: 730px;
     width: 800px;
     background-color: var(--gray-900);
     transition: transform 0.5s ease-in-out;

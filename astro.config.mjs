@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import { i18n, defaultLocaleSitemapFilter } from "astro-i18n-aut/integration";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
+import node from "@astrojs/node";
 const defaultLocale = "en";
 const locales = {
   "en": "en-US",
@@ -12,11 +13,13 @@ const locales = {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost:3000",
+  site: "https://localhost:3000",
   trailingSlash: "always",
   build: {
     format: "directory"
   },
+  output: "hybrid",
+
   integrations: [i18n({
     locales,
     defaultLocale
@@ -28,5 +31,8 @@ export default defineConfig({
     filter: defaultLocaleSitemapFilter({
       defaultLocale
     })
-  }), react()]
+  }), react()],
+  adapter: node({
+    mode: "standalone"
+  })
 });

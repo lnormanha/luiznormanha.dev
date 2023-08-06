@@ -1,4 +1,3 @@
-import React from "react";
 import "./ContactModal.css";
 import { X } from "@phosphor-icons/react";
 
@@ -8,12 +7,46 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+    const values = Object.fromEntries(data.entries());
+
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+
+    if (!emailRegex.test(String(values.email))) {
+      alert("Your email must be valid");
+      return;
+    }
+
+    const resendBody = {
+      // from: `${values.name} <${values.email}>`,
+      from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
+      to: "luiznormanha@gmail.com",
+      subject: values.subject,
+      html: `<h2> Novo contato de luiznormanha.dev.</h5>
+      </br>
+      <h5>Mensagem:</h5>
+      </br>
+      <p>${values.message}</p>`,
+    };
+
+    const emailResponse = await fetch("http://localhost:3000/send-email.json", {
+      method: "POST",
+      body: JSON.stringify(resendBody),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    if (emailResponse.status === 200) {
+      alert("Email enviado com sucesso!");
+    }
+  };
+
   return (
-    <div
-      className="modal-overlay"
-      aria-hidden={Boolean(!isOpen)}
-      // onClick={onClose}
-    >
+    <div className="modal-overlay" aria-hidden={Boolean(!isOpen)}>
       <div className="modal" aria-hidden={Boolean(!isOpen)}>
         <div className="modal-header">
           <h5>Contato</h5>
@@ -28,24 +61,31 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         </p>
         <p>Me envie uma mensagem e vamos conversar!</p>
 
-        <div className="input-container">
-          <label>Nome / Empresa</label>
-          <input></input>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="input-container">
+            <label>E-mail</label>
+            <input type="email" name="email" />
+          </div>
 
-        <div className="input-container">
-          <label>Assunto</label>
-          <input></input>
-        </div>
+          <div className="input-container">
+            <label>Nome / Empresa</label>
+            <input type="text" name="name" />
+          </div>
 
-        <div className="input-container">
-          <label>Mensagem</label>
-          <textarea />
-        </div>
+          <div className="input-container">
+            <label>Assunto</label>
+            <input type="text" name="subject" />
+          </div>
 
-        <div className="button-container">
-          <button>Enviar</button>
-        </div>
+          <div className="input-container">
+            <label>Mensagem</label>
+            <textarea name="message" />
+          </div>
+
+          <div className="button-container">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
       </div>
     </div>
   );
