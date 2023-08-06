@@ -3,6 +3,8 @@ import "./ContactModal.css";
 import i18nStrings from "@i18n";
 import { X } from "@phosphor-icons/react";
 
+const siteUrl = await import.meta.env.SITE_URL;
+
 interface ContactModalProps {
   isOpen: boolean;
   onClose(): void;
@@ -40,8 +42,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
 
     const resendBody = {
-      // from: `${values.name} <${values.email}>`,
-      from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
+      // from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
+      from: `luiznormanha.dev - ${values.name} <$${values.email}>`,
       to: "luiznormanha@gmail.com",
       subject: values.subject,
       html: `<h2>${i18nStrings[locale].contact.email.title}</h5>
@@ -51,7 +53,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       <p>${values.message}</p>`,
     };
 
-    const emailResponse = await fetch("http://localhost:3000/send-email.json", {
+    const emailResponse = await fetch(`${siteUrl}/send-email.json`, {
       method: "POST",
       body: JSON.stringify(resendBody),
       headers: {

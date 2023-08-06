@@ -13,7 +13,7 @@ const locales = {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://localhost:3000",
+  site: "https://luiznormanha.dev",
   trailingSlash: "always",
   build: {
     format: "directory"
