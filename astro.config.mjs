@@ -33,6 +33,6 @@ export default defineConfig({
     })
   }), react()],
   adapter: vercel({
-    includeFiles: ['./src/pages/send-email.json.ts'],
+    includeFiles: ['./src/pages/send-email.json'],
   }),
 });
