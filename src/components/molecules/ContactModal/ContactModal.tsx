@@ -10,6 +10,10 @@ interface ContactModalProps {
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   const [locale, setLocale] = React.useState("");
+  const [isToasterOpen, setIsToasterOpen] = React.useState(false);
+  const [toasterMessage, setToasterMessage] = React.useState("");
+
+  console.log({ isToasterOpen });
 
   React.useEffect(() => {
     const windowLocale =
@@ -27,7 +31,11 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
     if (!emailRegex.test(String(values.email))) {
-      alert(i18nStrings[locale].contact.form["email-error"]);
+      setIsToasterOpen(true);
+      setToasterMessage(i18nStrings[locale].contact.form["email-error"]);
+      setTimeout(() => {
+        setIsToasterOpen(false);
+      }, 5000);
       return;
     }
 
@@ -52,7 +60,12 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     });
 
     if (emailResponse.status === 200) {
-      alert(i18nStrings[locale].contact.form["email-success"]);
+      setIsToasterOpen(true);
+      setToasterMessage(i18nStrings[locale].contact.form["email-success"]);
+      setTimeout(() => {
+        setIsToasterOpen(false);
+        onClose();
+      }, 5000);
     }
   };
 
@@ -98,6 +111,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </button>
           </div>
         </form>
+        <div className="toaster" aria-hidden={!isToasterOpen}>
+          <p>{toasterMessage}</p>
+        </div>
       </div>
     </div>
   );

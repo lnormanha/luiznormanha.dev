@@ -25,6 +25,17 @@
   box-shadow: var(--shadow-md);
 }
 
+[aria-hidden="false"].modal-overlay {
+  display: flex;
+  opacity: 1;
+}
+
+[aria-hidden="false"].modal {
+  transform: translate(0, 0);
+  z-index: 1;
+  pointer-events: auto;
+}
+
 .modal-header {
   display: flex;
   flex-direction: row;
@@ -118,13 +129,27 @@ p {
   background-color: var(--accent-regular);
 }
 
-[aria-hidden="false"].modal-overlay {
+.toaster {
   display: flex;
-  opacity: 1;
+  position: absolute;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent-regular);
+  opacity: 0;
+  pointer-events: none;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease-in-out;
+  transform: translate(0%, 100%);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
-[aria-hidden="false"] .modal {
-  transform: translate(0, 0);
+[aria-hidden="false"].toaster {
+  opacity: 1;
+  transform: translate(0%, 0%);
   z-index: 1;
   pointer-events: auto;
 }
