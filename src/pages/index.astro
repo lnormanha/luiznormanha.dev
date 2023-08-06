@@ -5,7 +5,7 @@ import CallToAction from "@components/atoms/CallToAction.astro";
 import Hero from "@components/organisms/Hero.astro";
 import Icon from "@components/atoms/Icon.astro";
 
-import ContactCTA from "../components/molecules/ContactCTA/ContactCTA.jsx";
+import ContactCTA from "@components/molecules/ContactCTA/ContactCTA";
 import Skills from "../components/organisms/Skills.astro";
 
 import i18nStrings from "@i18n";
@@ -53,7 +53,6 @@ const locale = Astro.url.pathname.slice(1, 3) === "pt" ? "pt" : "en";
     <ContactCTA client:load />
   </div>
 
-  <script></script>
 
   <style>
     .hero {
@@ -198,4 +197,4 @@ const locale = Astro.url.pathname.slice(1, 3) === "pt" ? "pt" : "en";
       }
     }
   </style>
-</BaseLayout>../components/molecules/ContactCTA.tsx
+</BaseLayout>
