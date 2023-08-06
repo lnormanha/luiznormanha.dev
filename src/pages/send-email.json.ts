@@ -1,7 +1,6 @@
 import type { APIRoute } from "astro";
 import { Resend } from "resend";
-import vercel from "@astrojs/vercel/serverless";
-
+x;
 export const prerender = true;
 const resendKey = await import.meta.env.RESEND_API_KEY;
 
