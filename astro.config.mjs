@@ -3,6 +3,7 @@ import { i18n, defaultLocaleSitemapFilter } from "astro-i18n-aut/integration";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
 import node from "@astrojs/node";
+import vercel from "@astrojs/vercel/serverless";
 const defaultLocale = "en";
 const locales = {
   "en": "en-US",
@@ -19,7 +20,6 @@ export default defineConfig({
     format: "directory"
   },
   output: "hybrid",
-
   integrations: [i18n({
     locales,
     defaultLocale
@@ -32,7 +32,5 @@ export default defineConfig({
       defaultLocale
     })
   }), react()],
-  adapter: node({
-    mode: "standalone"
-  })
+  adapter: vercel()
 });
