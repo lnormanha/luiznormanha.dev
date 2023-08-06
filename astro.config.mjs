@@ -22,7 +22,8 @@ export default defineConfig({
   output: "hybrid",
   integrations: [i18n({
     locales,
-    defaultLocale
+    defaultLocale,
+    include: ["pages/**/*.ts"]
   }), sitemap({
     i18n: {
       locales,
@@ -30,9 +31,10 @@ export default defineConfig({
     },
     filter: defaultLocaleSitemapFilter({
       defaultLocale
-    })
+    }),
   }), react()],
   adapter: vercel({
     includeFiles: ['./src/pages/send-email.json'],
   }),
+
 });
