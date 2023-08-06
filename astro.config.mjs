@@ -19,7 +19,7 @@ export default defineConfig({
   build: {
     format: "directory"
   },
-  output: "hybrid",
+  output: "server",
   integrations: [i18n({
     locales,
     defaultLocale,
