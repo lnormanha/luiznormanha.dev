@@ -14,8 +14,6 @@ export default function ContactCTA() {
     const windowLocale =
       window.location.pathname.slice(1, 3) === "pt" ? "pt" : "en";
 
-    console.log({ windowLocale });
-
     setLocale(windowLocale);
   }, []);
 

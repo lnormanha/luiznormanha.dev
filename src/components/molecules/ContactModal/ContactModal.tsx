@@ -1,4 +1,6 @@
+import React from "react";
 import "./ContactModal.css";
+import i18nStrings from "@i18n";
 import { X } from "@phosphor-icons/react";
 
 interface ContactModalProps {
@@ -7,6 +9,15 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
+  const [locale, setLocale] = React.useState("");
+
+  React.useEffect(() => {
+    const windowLocale =
+      window.location.pathname.slice(1, 3) === "pt" ? "pt" : "en";
+
+    setLocale(windowLocale);
+  }, []);
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
@@ -16,7 +27,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
     if (!emailRegex.test(String(values.email))) {
-      alert("Your email must be valid");
+      alert(i18nStrings[locale].contact.form["email-error"]);
       return;
     }
 
@@ -25,9 +36,9 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
       to: "luiznormanha@gmail.com",
       subject: values.subject,
-      html: `<h2> Novo contato de luiznormanha.dev.</h5>
+      html: `<h2>${i18nStrings[locale].contact.email.title}</h5>
       </br>
-      <h5>Mensagem:</h5>
+      <h5>${i18nStrings[locale].contact.email.message}</h5>
       </br>
       <p>${values.message}</p>`,
     };
@@ -41,49 +52,50 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     });
 
     if (emailResponse.status === 200) {
-      alert("Email enviado com sucesso!");
+      alert(i18nStrings[locale].contact.form["email-success"]);
     }
   };
+
+  if (!locale) return null;
 
   return (
     <div className="modal-overlay" aria-hidden={Boolean(!isOpen)}>
       <div className="modal" aria-hidden={Boolean(!isOpen)}>
         <div className="modal-header">
-          <h5>Contato</h5>
+          <h5>{i18nStrings[locale].contact.title}</h5>
           <button onClick={onClose}>
             <X size={32} weight="bold" color="var(--gray-0)" />
           </button>
         </div>
-        <p>
-          Possuí alguma oportunidade para conversar ou um projeto que precise
-          ser desenvolvido? Ou está interessado apenas em trocar uma idea sobre
-          desenvolvimento?
-        </p>
-        <p>Me envie uma mensagem e vamos conversar!</p>
+        {i18nStrings[locale].contact.description.map((text) => (
+          <p>{text}</p>
+        ))}
 
         <form onSubmit={handleSubmit}>
           <div className="input-container">
-            <label>E-mail</label>
+            <label>{i18nStrings[locale].contact.form["e-mail"]}</label>
             <input type="email" name="email" />
           </div>
 
           <div className="input-container">
-            <label>Nome / Empresa</label>
+            <label>{i18nStrings[locale].contact.form.name}</label>
             <input type="text" name="name" />
           </div>
 
           <div className="input-container">
-            <label>Assunto</label>
+            <label>{i18nStrings[locale].contact.form.subject}</label>
             <input type="text" name="subject" />
           </div>
 
           <div className="input-container">
-            <label>Mensagem</label>
+            <label>{i18nStrings[locale].contact.form.message}</label>
             <textarea name="message" />
           </div>
 
           <div className="button-container">
-            <button type="submit">Enviar</button>
+            <button type="submit">
+              {i18nStrings[locale].contact.form.submit}
+            </button>
           </div>
         </form>
       </div>

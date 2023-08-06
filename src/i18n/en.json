@@ -54,5 +54,25 @@
         "Bachelor’s degree in Software Engineering - UNIFAE 2014-2018"
       ]
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": [
+      "Do you have any opportunity to chat or a project that needs to be developed? Or are you just interested in exchanging information about development?",
+      "Send me a message and let’s chat!"
+    ],
+    "form": {
+      "e-mail": "E-mail",
+      "name": "Name / Company",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit",
+      "email-error": "Your e-mail must be valid!",
+      "email-success": "E-mail has been sent succesfully!"
+    },
+    "email": {
+      "title": "New contact from luiznormanha.dev",
+      "message": "Message:"
+    }
   }
 }

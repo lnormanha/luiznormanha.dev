@@ -50,6 +50,23 @@ interface LocaleStrings {
         description: string[];
       };
     };
+    contact: {
+      title: string;
+      description: string[];
+      form: {
+        "e-mail": string;
+        name: string;
+        subject: string;
+        message: string;
+        submit: string;
+        "email-error": string;
+        "email-success": string;
+      };
+      email: {
+        title: string;
+        message: string;
+      };
+    };
   };
 }
 

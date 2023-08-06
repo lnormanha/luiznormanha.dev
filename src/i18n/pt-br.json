@@ -54,5 +54,25 @@
         "Bacharelado em Engenharia de Software - UNIFAE 2014-2018"
       ]
     }
+  },
+  "contact": {
+    "title": "Contato",
+    "description": [
+      "Possuí alguma oportunidade para conversar ou um projeto que precise ser desenvolvido? Ou está interessado apenas em trocar uma idea sobre desenvolvimento?",
+      "Me envie uma mensagem e vamos conversar!"
+    ],
+    "form": {
+      "e-mail": "E-mail",
+      "name": "Nome / Empresa",
+      "subject": "Assunto",
+      "message": "Mensagem",
+      "submit": "Enviar",
+      "email-error": "Insira um e-mail válido!",
+      "email-success": "E-mail enviado com sucesso!"
+    },
+    "email": {
+      "title": "Novo contato de luiznormanha.dev",
+      "message": "Mensagem:"
+    }
   }
 }
