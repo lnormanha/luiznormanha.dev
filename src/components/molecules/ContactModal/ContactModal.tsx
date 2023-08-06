@@ -3,8 +3,6 @@ import "./ContactModal.css";
 import i18nStrings from "@i18n";
 import { X } from "@phosphor-icons/react";
 
-const siteUrl = await import.meta.env.SITE_URL;
-
 interface ContactModalProps {
   isOpen: boolean;
   onClose(): void;
@@ -53,7 +51,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       <p>${values.message}</p>`,
     };
 
-    const emailResponse = await fetch(`${siteUrl}/send-email.json`, {
+    const emailResponse = await fetch(`/send-email.json`, {
       method: "POST",
       body: JSON.stringify(resendBody),
       headers: {
