@@ -40,8 +40,8 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
 
     const resendBody = {
-      from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
-      // from: `luiznormanha.dev - ${values.name} <${values.email}>`,
+      // from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
+      from: `luiznormanha.dev - ${values.name} <${values.email}>`,
       to: "luiznormanha@gmail.com",
       subject: values.subject,
       html: `<h2>${i18nStrings[locale].contact.email.title}</h5>

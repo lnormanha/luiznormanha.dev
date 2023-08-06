@@ -32,5 +32,7 @@ export default defineConfig({
       defaultLocale
     })
   }), react()],
-  adapter: vercel()
+  adapter: vercel({
+    includeFiles: ['./src/pages/send-email.json.ts'],
+  }),
 });
