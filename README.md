@@ -1,17 +1,25 @@
-# Astro Starter Kit: Portfolio
 
-```
-npm create astro@latest -- --template portfolio
-```
+<p align="center" justify="center">
+  <img width="300" alt="astro-icon-light" src="https://github.com/lnormanha/luiznormanha.dev/assets/31674320/dbfbbd57-d0e5-4c05-8bba-e23955cb9601">
+</p>
+<h1 align="center" justify="center">
+  
+  [luiznormanha.dev](luiznormanha.dev)
+  
+</h1>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+## <img width="18" alt="astro-icon-light" src="https://github.com/lnormanha/luiznormanha.dev/assets/31674320/3d9ccfda-8573-4976-b6c9-36a0ea0df97f"> My personal portfolio website, made with Astro <img width="18" alt="astro-icon-light" src="https://github.com/lnormanha/luiznormanha.dev/assets/31674320/3d9ccfda-8573-4976-b6c9-36a0ea0df97f">
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Screenshot_20230806_161537](https://github.com/lnormanha/luiznormanha.dev/assets/31674320/40f8ed1f-5944-4dd4-944f-f7e42e8c5169)
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+## Project Stack
 
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- Node.js
+- [Phosphor Icons](https://phosphoricons.com/)
+- [Resend](https://resend.com/)
+- [astro-18n-aut](https://github.com/jlarmstrongiv/astro-i18n-aut)
 
 ## 🧞 Commands
 
@@ -19,13 +27,9 @@ All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+| `yarn install`             | Installs dependencies                            |
+| `yarn dev`             | Starts local dev server at `localhost:3000`      |
+| `yarn build`           | Build your production site to `./dist/`          |
+| `yarn preview`         | Preview your build locally, before deploying     |
+| `yarn astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `yarn astro -- --help` | Get help using the Astro CLI                     |
