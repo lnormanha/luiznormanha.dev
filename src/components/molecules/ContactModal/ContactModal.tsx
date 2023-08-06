@@ -49,7 +49,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
       <p>${values.message}</p>`,
     };
 
-    const emailResponse = await fetch(`/send-email.json`, {
+    const emailResponse = await fetch(`/api/send-email.json`, {
       method: "POST",
       body: JSON.stringify(resendBody),
       headers: {
