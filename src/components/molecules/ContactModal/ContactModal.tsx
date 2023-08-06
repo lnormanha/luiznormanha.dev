@@ -38,15 +38,18 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     }
 
     const resendBody = {
-      // from: `luiznormanha.dev - ${values.name} <onboarding@resend.dev>`,
-      from: `luiznormanha.dev - ${values.name} <${values.email}>`,
+      from: `luiznormanha.dev - ${values.name} <contact@luiznormanha.dev>`,
+      // from: `luiznormanha.dev - ${values.name} <${values.email}>`,
       to: "luiznormanha@gmail.com",
       subject: values.subject,
-      html: `<h2>${i18nStrings[locale].contact.email.title}</h5>
+      reply_to: values.email,
+      html: `<h2>${i18nStrings[locale].contact.email.title}</h2>
       </br>
-      <h5>${i18nStrings[locale].contact.email.message}</h5>
+      <h3>${i18nStrings[locale].contact.form["e-mail"]}: ${values.email}</h3>
       </br>
-      <p>${values.message}</p>`,
+      <h3>${i18nStrings[locale].contact.email.message}</h3>
+      </br>
+      <p style="font-size: 20px;">${values.message}</p>`,
     };
 
     const emailResponse = await fetch(`/api/send-email.json`, {
