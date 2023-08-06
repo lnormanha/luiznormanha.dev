@@ -33,8 +33,6 @@ export default defineConfig({
       defaultLocale
     }),
   }), react()],
-  adapter: vercel({
-    includeFiles: ['./src/pages/send-email.json'],
-  }),
+  adapter: vercel(),
 
 });
