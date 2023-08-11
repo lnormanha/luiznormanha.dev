@@ -1,9 +1,9 @@
 ---
 title: Wine
-startDate: Março 2020
-endDate: Janeiro 2022
+startDate: March 2020
+endDate: January 2022
 img: /assets/logos/wine_logo.jpg
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: Wine Logo
 description: |
   E-commerce e assinaturas de vinho localizado no Brasil e no México
 summary:

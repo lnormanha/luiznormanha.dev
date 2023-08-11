@@ -1,9 +1,9 @@
 ---
 title: 9GLabs
-startDate: Abril 2019
-endDate: Fevereiro 2020
+startDate: April 2019
+endDate: January 2020
 img: /assets/logos/9g_logo.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: 9GLabs Logo
 description: |
     Uma startup focada em desenvolver projetos inovadores focado em e-commerce,
 summary:

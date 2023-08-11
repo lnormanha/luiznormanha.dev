@@ -3,7 +3,7 @@ title: Zaitt
 startDate: February 2018
 endDate: April 2019
 img: /assets/logos/zaitt_logo.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: Zaitt Logo
 description: |
   A smart store franchisee in Brazil
 summary:

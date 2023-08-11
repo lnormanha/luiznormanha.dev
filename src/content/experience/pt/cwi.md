@@ -1,9 +1,9 @@
 ---
 title: CWI Software
-startDate: Março 2022
-endDate: Janeiro 2023
+startDate: March 2022
+endDate: January 2023
 img: /assets/logos/cwi_logo.jpg
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: CWI Logo
 description: |
   Empresa de TI focada em desenvolver softwares para seus clientes
 summary:

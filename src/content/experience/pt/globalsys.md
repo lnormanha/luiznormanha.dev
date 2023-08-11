@@ -1,9 +1,9 @@
 ---
 title: Globalsys Soluções de TI
-startDate: Fevereiro 2020
-endDate: Junho 2021
+startDate: February 2020
+endDate: June 2021
 img: /assets/logos/globalsys_logo.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: Globalsys Logo
 description: |
   Empresa de TI focada em desenvolver softwares para seus clientes
 summary:

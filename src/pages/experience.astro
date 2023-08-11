@@ -17,6 +17,8 @@ const projects = (
     return id.startsWith(locale);
   })
 ).sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf());
+
+console.log({projects: JSON.stringify(projects)})
 ---
 
 <BaseLayout
