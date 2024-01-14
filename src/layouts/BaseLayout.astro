@@ -3,9 +3,10 @@
 // https://docs.astro.build/en/core-concepts/layouts/
 import "@/styles/globals.css";
 
+import { ViewTransitions } from "astro:transitions";
+
 // Component Imports
 import MainHead from "@/components/templates/MainHead.astro";
-import { ViewTransitions } from "astro:transitions";
 
 interface Props {
   title?: string | undefined;
@@ -21,7 +22,7 @@ const { title, description } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
-    <div class="bg-primary w-full">
+    <div class="w-full bg-primary flex">
       <slot />
     </div>
 

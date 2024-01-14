@@ -1,4 +1,5 @@
 {
+  "root": true,
   "env": {
     "browser": true,
     "es2021": true
@@ -12,7 +13,9 @@
     "plugin:import/typescript",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:astro/recommended"
+    "plugin:astro/recommended",
+    "plugin:astro/jsx-a11y-recommended",
+    "prettier"
   ],
   "overrides": [
     {
@@ -27,6 +30,7 @@
         "extraFileExtensions": [".astro"]
       },
       "rules": {
+        "import/no-unresolved": "off"
         // override/add rules settings here, such as:
         // "astro/no-set-html-directive": "error"
       }
@@ -35,19 +39,15 @@
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "project": true,
     "ecmaFeatures": {
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "extraFileExtensions": [".astro"]
   },
   "plugins": [
-    "@typescript-eslint",
-    "import",
-    "react",
-    "react-hooks",
-    "prettier",
-    "tailwindcss",
     "simple-import-sort"
   ],
   "rules": {
@@ -91,18 +91,8 @@
     ]
   },
   "settings": {
-    "react": {
-      "version": "detect"
-    },
     "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "moduleDirectory": ["node_modules", "src/"]
-      },
-      "typescript": {}
+      "typescript": true
     }
-    
-  },
-  
-  
+  }
 }
