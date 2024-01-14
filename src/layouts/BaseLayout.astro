@@ -1,9 +1,10 @@
 ---
 // Learn about using Astro layouts:
 // https://docs.astro.build/en/core-concepts/layouts/
+import "@/styles/globals.css";
 
 // Component Imports
-import MainHead from "@components/templates/MainHead.astro";
+import MainHead from "@/components/templates/MainHead.astro";
 import { ViewTransitions } from "astro:transitions";
 
 interface Props {
@@ -20,7 +21,7 @@ const { title, description } = Astro.props;
     <ViewTransitions />
   </head>
   <body>
-    <div class="stack backgrounds">
+    <div class="bg-primary w-full">
       <slot />
     </div>
 
@@ -30,62 +31,5 @@ const { title, description } = Astro.props;
         document.documentElement.classList.add("loaded")
       );
     </script>
-
-    <style>
-      :root {
-        --_placeholder-bg: linear-gradient(transparent, transparent);
-        --bg-svg-blend-mode: overlay;
-        --bg-blend-mode: darken;
-        --bg-image-aspect-ratio: 2.25;
-        --bg-scale: 1.68;
-        --bg-aspect-ratio: calc(var(--bg-image-aspect-ratio) / var(--bg-scale));
-        --bg-gradient-size: calc(var(--bg-scale) * 100%);
-      }
-
-      :root.theme-dark {
-        --bg-svg-blend-mode: darken;
-        --bg-blend-mode: lighten;
-      }
-
-      /* These backgrounds are displayed below the fold, so we lazy load them
-			   once the `.loaded` class has been set.  */
-      :root.loaded {
-      }
-      :root.loaded.theme-dark {
-      }
-
-      @media (min-width: 50em) {
-        :root {
-          --bg-scale: 1;
-        }
-        :root.theme-dark {
-        }
-
-        :root.loaded {
-        }
-        :root.loaded.theme-dark {
-        }
-      }
-
-      .backgrounds {
-        min-height: 100%;
-        isolation: isolate;
-        background: var(--gradient-bg);
-
-        background:
-		/*noise*/ url("/assets/backgrounds/noise.png") top
-            center/220px repeat,
-          /*gradient-bg*/ var(--gradient-bg);
-        background-blend-mode: /*noise*/ overlay;
-      }
-      @media (forced-colors: active) {
-        /* Deactivate custom backgrounds for high contrast users. */
-        .backgrounds {
-          background: none;
-          background-blend-mode: none;
-          --bg-gradient-size: none;
-        }
-      }
-    </style>
   </body>
 </html>

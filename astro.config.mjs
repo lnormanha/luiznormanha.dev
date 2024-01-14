@@ -4,6 +4,8 @@ import react from "@astrojs/react";
 import node from "@astrojs/node";
 import vercel from "@astrojs/vercel/serverless";
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://luiznormanha.dev",
@@ -12,7 +14,7 @@ export default defineConfig({
     format: "directory",
   },
   output: "hybrid",
-  integrations: [react()],
+  integrations: [react(), tailwind()],
   adapter: vercel({
     includeFiles: ["./src/pages/api/send-email.json.ts"],
   }),
