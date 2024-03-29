@@ -14,7 +14,7 @@ export default defineConfig({
     format: "directory",
   },
   output: "hybrid",
-  integrations: [react(), tailwind()],
+  integrations: [react(), tailwind({ applyBaseStyles: false })],
   adapter: vercel({
     includeFiles: ["./src/pages/api/send-email.json.ts"],
   }),

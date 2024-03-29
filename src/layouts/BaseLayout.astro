@@ -7,6 +7,7 @@ import { ViewTransitions } from "astro:transitions";
 
 // Component Imports
 import MainHead from "@/components/templates/MainHead.astro";
+import Navbar from "@/components/navbar/Navbar.astro";
 
 interface Props {
   title?: string | undefined;
@@ -21,16 +22,10 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body>
-    <div class="w-full bg-primary flex">
+  <body class="flex flex-1 items-center justify-center">
+    <div class="flex min-h-full flex-1 bg-background">
+      <Navbar />
       <slot />
     </div>
-
-    <script>
-      // Add “loaded” class once the document has completely loaded.
-      addEventListener("load", () =>
-        document.documentElement.classList.add("loaded")
-      );
-    </script>
   </body>
 </html>

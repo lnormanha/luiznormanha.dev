@@ -23,6 +23,7 @@ module.exports = {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          400: "hsl(var(--primary-400))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -68,10 +69,27 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      fontFamily: {
-        sans: ["'Josefin Sans'", ..._fontFamily.sans],
-        jost: ["Jost"],
+      fontSize: {
+        sm: '0.750rem',
+        base: '1rem',
+        xl: '1.333rem',
+        '2xl': '1.777rem',
+        '3xl': '2.369rem',
+        '4xl': '3.158rem',
+        '5xl': '4.210rem',
       },
+      fontFamily: {
+        heading: 'Source Code Pro',
+        body: 'Ubuntu Mono',
+      },
+      fontWeight: {
+        normal: '400',
+        bold: '700',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'radial-gradient-bottom': 'radial-gradient(ellipse at bottom,hsl(var(--secondary)) 0%, hsl(var(--secondary)) 10%, hsl(var(--background)) 60%)'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
