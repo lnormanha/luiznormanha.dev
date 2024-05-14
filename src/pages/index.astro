@@ -1,7 +1,116 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import reactIcon from "public/assets/react-icon.png";
+import nextIcon from "public/assets/next-icon.png";
+import jsIcon from "public/assets/js-icon.png";
+import tsIcon from "public/assets/ts-icon.png";
+import figmaIcon from "public/assets/figma-icon.png";
+import goIcon from "public/assets/go-icon.png";
 ---
 
-<BaseLayout />
+<BaseLayout>
+  <section class="flex-1">
+    <div class="flex-[0.5]">
+      <h1 class="font-heading text-5xl font-bold">
+        Hi,<br /> I'm Luiz Normanha
+      </h1>
+      <div class="w-[30%] space-y-4">
+        <p>
+          I’m a Software Developer with a passion for learning and developing
+          new things, and have fun doing so.
+        </p>
+        <p>Currently learning Go and building XXXX.</p>
+      </div>
+    </div>
+  </section>
+  <section class="flex w-full flex-1 flex-row">
+    <div class="flex flex-[0.5] flex-col">
+      <h3 class="font-heading text-3xl font-bold">Skills and Experience</h3>
+      <p>
+        I have 6+ years working as a Software developer and my main experience
+        revolves around JavaScript and TypeScript, React and React Native, in
+        both Front-end and Back-end development.
+      </p>
+    </div>
+    <div class="flex flex-[0.5] flex-row items-end justify-end space-x-4">
+      <Image
+        src={reactIcon}
+        alt="LN Dev Logo"
+        decoding="async"
+        loading="lazy"
+        class="h-20 w-20 object-contain"
+      />
+      <Image
+        src={nextIcon}
+        alt="LN Dev Logo"
+        decoding="async"
+        loading="lazy"
+        class="h-20 w-20 object-contain"
+      />
+      <Image
+        src={jsIcon}
+        alt="LN Dev Logo"
+        decoding="async"
+        loading="lazy"
+        class="h-20 w-20 object-contain"
+      />
+      <Image
+        src={tsIcon}
+        alt="LN Dev Logo"
+        decoding="async"
+        loading="lazy"
+        class="h-20 w-20 object-contain"
+      />
+      <Image
+        src={figmaIcon}
+        alt="LN Dev Logo"
+        decoding="async"
+        loading="lazy"
+        class="h-20 w-20 object-contain"
+      />
+      <Image
+        src={goIcon}
+        alt="LN Dev Logo"
+        decoding="async"
+        loading="lazy"
+        class="h-20 w-20 object-contain"
+      />
+    </div>
+  </section>
+  <section class="flex w-full flex-1 flex-row">
+    <div class="flex flex-1 flex-col">
+      <h3 class="font-heading text-3xl font-bold">Featured Projects</h3>
+      <div class="flex flex-1 flex-row space-x-6">
+        <div class="flex w-[25%] flex-col">
+          <h5 class="text-2xl font-bold text-accent">>luiznormanha.dev_</h5>
+          <p>
+            Personal portfolio made using Figma and Astro for learning purposes.
+          </p>
+        </div>
+        <div class="flex w-[25%] flex-col">
+          <h5 class="text-2xl font-bold text-accent">>Negotiation 7.0 App_</h5>
+          <p>
+            App for the Negotiation 7.0 methodology for negotiations made using
+            React Native.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="flex w-full flex-1 flex-row">
+    <div class="flex flex-1 flex-col">
+      <h3 class="font-heading text-2xl font-bold">Featured Articles</h3>
+      <div class="flex flex-1 flex-row space-x-6">
+        <div class="flex w-[25%] flex-col space-y-2">
+          <h5 class="text-lg font-bold underline">
+            My 2024 objectives and perspectives
+          </h5>
+          <p>15 Feb 2024 - 6 MIN READ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
 
 <style></style>

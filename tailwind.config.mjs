@@ -80,7 +80,7 @@ module.exports = {
       },
       fontFamily: {
         heading: 'Source Code Pro',
-        body: 'Ubuntu Mono',
+        sans: 'Ubuntu Mono',
       },
       fontWeight: {
         normal: '400',
@@ -88,7 +88,8 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'radial-gradient-bottom': 'radial-gradient(ellipse at bottom,hsl(var(--secondary)) 0%, hsl(var(--secondary)) 10%, hsl(var(--background)) 60%)'
+        'radial-gradient-bottom': 'radial-gradient(ellipse at bottom,hsl(var(--secondary)) 0%, hsl(var(--secondary)) 10%, hsl(var(--background)) 60%)',
+        'radial-gradient-top': 'radial-gradient(ellipse at top,hsl(var(--secondary)) 0%, hsl(var(--secondary)) 10%, hsl(var(--background)) 60%)'
       }
     },
   },
