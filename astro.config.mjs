@@ -5,6 +5,7 @@ import node from "@astrojs/node";
 import vercel from "@astrojs/vercel/serverless";
 
 import tailwind from "@astrojs/tailwind";
+import htmx from "astro-htmx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,7 +15,7 @@ export default defineConfig({
     format: "directory",
   },
   output: "hybrid",
-  integrations: [react(), tailwind({ applyBaseStyles: false })],
+  integrations: [react(), tailwind({ applyBaseStyles: false }), htmx()],
   adapter: vercel({
     includeFiles: ["./src/pages/api/send-email.json.ts"],
   }),
