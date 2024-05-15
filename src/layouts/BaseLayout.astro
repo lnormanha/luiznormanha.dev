@@ -23,12 +23,14 @@ const { title, description } = Astro.props;
     <MainHead title={title} description={description} />
     <ViewTransitions />
   </head>
-  <body class="flex flex-1 items-center justify-center">
+  <body class="flex flex-1 items-center justify-center px-4">
     <div
-      class="flex min-h-full flex-1 flex-col items-center justify-center bg-background"
+      class="flex h-full max-h-full flex-1 flex-col items-center bg-background"
     >
       <Navbar />
-      <div class="flex w-full max-w-[1440px] flex-1 flex-col space-y-6">
+      <div
+        class="flex w-[80%] flex-1 flex-col items-center justify-center space-y-6"
+      >
         <slot />
       </div>
       <Footer />
