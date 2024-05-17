@@ -90,7 +90,10 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'radial-gradient-bottom': 'radial-gradient(ellipse at bottom,hsl(var(--secondary)) 0%, hsl(var(--secondary)) 10%, hsl(var(--background)) 60%)',
         'radial-gradient-top': 'radial-gradient(ellipse at top,hsl(var(--secondary)) 0%, hsl(var(--secondary)) 10%, hsl(var(--background)) 60%)'
-      }
+      },
+      // screens: {
+      //   "2xl": "1440px",
+      // },
     },
   },
   plugins: [require("tailwindcss-animate")],
