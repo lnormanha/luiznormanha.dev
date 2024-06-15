@@ -8,10 +8,16 @@ import tsIcon from "public/assets/ts-icon.png";
 import figmaIcon from "public/assets/figma-icon.png";
 import goIcon from "public/assets/go-icon.png";
 
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslatedPath,
+  useTranslations,
+} from "@/i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const translatePath = useTranslatedPath(lang);
 ---
 
 <BaseLayout>

@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import profile from "public/assets/profile.png";
+---
+
+<BaseLayout>
+  <section class="flex w-full flex-1 flex-col">
+    <h1 class="font-heading text-4xl font-bold 2xl:text-5xl">About me</h1>
+    <div class="flex flex-1">
+      <div class="align-center flex flex-[0.4] flex-col justify-center">
+        <Image
+          src={profile}
+          alt="LN Profile"
+          decoding="async"
+          loading="lazy"
+          class="h-80 w-80 object-contain"
+        />
+      </div>
+      <div class="flex flex-[0.6] flex-col justify-center space-y-6">
+        <p>
+          Hi! I’m Luiz Normanha, I’m a Software Developer based in Brazil,
+          currently living in Porto Alegre, Rio Grande do Sul.
+        </p>
+        <p>
+          I started working professionally as a Software Developer in 2018, but
+          since 2016 I’m actively doing software development. Before working
+          professionally I manly developed games in Unity with C#.
+        </p>
+        <p>
+          On my day-to-day work I use React, JavaScript and TypeScript mainly,
+          with 6 years using them as my main stack, doing different types of
+          projects.
+        </p>
+        <p>
+          In my free time I like to learn new things, be it for Software
+          Development or other fields. My hobbies consist of playing games when
+          I have the time, watching movies or series, or just chilling with my
+          cats.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style></style>
