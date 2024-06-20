@@ -11,4 +11,12 @@ export const collections = {
       featured_articles_title: z.string(),
     }),
   }),
+  jobs: defineCollection({
+    schema: z.object({
+      title: z.string(),
+      company: z.string(),
+      city: z.string(),
+      period: z.string(),
+    })
+  })
 };
