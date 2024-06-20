@@ -13,10 +13,9 @@ import Footer from "@/components/footer/Footer.astro";
 interface Props {
   title?: string | undefined;
   description?: string | undefined;
-  maxHeight?: string | undefined;
 }
 
-const { title, description, maxHeight = "100vh" } = Astro.props;
+const { title, description } = Astro.props;
 
 import { getLangFromUrl } from "../i18n/utils";
 
@@ -30,7 +29,7 @@ const lang = getLangFromUrl(Astro.url);
   </head>
   <body class="flex flex-1 items-center justify-center px-4">
     <div
-      class=`flex h-[100vw] max-h-[${maxHeight}] flex-1 flex-col items-center justify-between bg-background`
+      class=`flex h-[100vw] max-h-[100vh] flex-1 flex-col items-center justify-between bg-background`
     >
       <Navbar />
       <div

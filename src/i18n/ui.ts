@@ -22,7 +22,9 @@ export const englishTranslation = {
     "On my day-to-day worked I user React, JavaScript and TypeScript mainly with 6 years using them as my main stack, doing different types of projects.",
     "In my free time I like to learn new thing, be it for Software Development or other fields. My hobbies consist of playing games when I have the time, watching movies or series, or just chilling with my cats"
   ],
-  "about.career": "Career"
+  "about.career": "Career",
+  'tools.title': "Tools and Apps",
+  'tools.description': 'Tools and apps that I use on my work and personal projects. I like to share them with others, so I list them all here for ease of access.'
 };
 export const portugueseTranslation = {
   "home.title": "Olá, eu sou o Luiz Normanha",
@@ -41,7 +43,10 @@ export const portugueseTranslation = {
     "No meu dia-a-dia eu trabalho com React, JavaScript e TypeScript principalmente, com 6 anos usando eles como minha principal stack, fazendo projetos de diferentes tipos.",
     "No meu tempo livre eu gosto de aprender novas coisas, seja para o desenvolvimento de software ou outras áreas. Meus hobbies consistem de jogar jogos quando tenho o tempo, assistir séries ou filmes, ou apenas ficar relaxando com meus gatos."
   ],
-  "about.career": "Carreira"
+  "about.career": "Carreira",
+  'tools.title': "Ferramentas e Aplicativos",
+  'tools.description': 'Aplicativos e ferramentas que e uso no meu trabalho e projetos pessoais. Eu gosto de compartilhar eles com os outros, então eu listo todos aqui para facilitar o acesso.'
+
 };
 
 export const showDefaultLang = false;
