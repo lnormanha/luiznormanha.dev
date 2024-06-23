@@ -1,7 +1,8 @@
 ---
+import { fade } from "astro:transitions";
+import cvIcon from "public/assets/cv-icon.png";
 import gitHubIcon from "public/assets/github-icon.png";
 import linkedinIcon from "public/assets/linkedin-icon.png";
-import cvIcon from "public/assets/cv-icon.png";
 
 import Icon from "@/components/icon/Icon.astro";
 ---
@@ -13,24 +14,30 @@ import Icon from "@/components/icon/Icon.astro";
   <div
     class="border-secondary-800 flex h-full w-[80%] flex-row items-center justify-center border-t bg-radial-gradient-top from-secondary from-90% to-background to-0%"
   >
-    <button
-      class="flex flex-row items-center justify-center space-x-2 p-6 font-heading"
+    <a
+      href="/"
+      class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
+      transition:animate={fade({ duration: "500ms" })}
     >
       <Icon icon={linkedinIcon} />
       <p>LinkedIn</p>
-    </button>
-    <button
-      class="flex flex-row items-center justify-center space-x-2 p-6 font-heading"
+    </a>
+    <a
+      href="/"
+      class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
+      transition:animate={fade({ duration: "500ms" })}
     >
       <Icon icon={gitHubIcon} />
       <p>GitHub</p>
-    </button>
-    <button
-      class="flex flex-row items-center justify-center space-x-2 p-6 font-heading"
+    </a>
+    <a
+      href="/"
+      class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
+      transition:animate={fade({ duration: "500ms" })}
     >
       <Icon icon={cvIcon} />
       <p>CV</p>
-    </button>
+    </a>
   </div>
   <div class="flex h-20 w-20 flex-col items-center justify-center"></div>
 </section>

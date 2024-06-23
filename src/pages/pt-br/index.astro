@@ -1,28 +1,26 @@
 ---
 import { Image } from "astro:assets";
-import FixedLayout from "@/layouts/FixedLayout.astro";
-import reactIcon from "public/assets/react-icon.png";
-import nextIcon from "public/assets/next-icon.png";
-import jsIcon from "public/assets/js-icon.png";
-import tsIcon from "public/assets/ts-icon.png";
+import { fade } from "astro:transitions";
 import figmaIcon from "public/assets/figma-icon.png";
 import goIcon from "public/assets/go-icon.png";
+import jsIcon from "public/assets/js-icon.png";
+import nextIcon from "public/assets/next-icon.png";
+import reactIcon from "public/assets/react-icon.png";
+import tsIcon from "public/assets/ts-icon.png";
 
-import {
-  getLangFromUrl,
-  useTranslatedPath,
-  useTranslations,
-} from "@/i18n/utils";
+import { getLangFromUrl, useTranslations } from "@/i18n/utils";
+import FixedLayout from "@/layouts/FixedLayout.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const translatePath = useTranslatedPath(lang);
 ---
 
 <FixedLayout>
   <section class="flex w-full flex-1 flex-col">
-    <div class="flex flex-[0.5] flex-col justify-center">
+    <div
+      class="flex flex-[0.5] flex-col justify-center"
+      transition:animate={fade({ duration: "500ms" })}
+    >
       <h1 class="font-heading text-4xl font-bold 2xl:text-5xl">
         {t("home.title")}
       </h1>
@@ -35,7 +33,10 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
   <section class="flex w-full flex-1 flex-row">
-    <div class="flex flex-[0.5] flex-col justify-center">
+    <div
+      class="flex flex-[0.5] flex-col justify-center"
+      transition:animate={fade({ duration: "500ms" })}
+    >
       <h3 class="font-heading text-3xl font-bold 2xl:text-3xl">
         {t("home.skills.title")}
       </h3>
@@ -44,6 +45,7 @@ const translatePath = useTranslatedPath(lang);
       </p>
     </div>
     <div
+      transition:animate={fade({ duration: "500ms" })}
       class="flex w-full flex-[0.5] flex-row items-center justify-end space-x-4"
     >
       <Image
@@ -91,19 +93,22 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
   <section class="flex w-full flex-1 flex-row">
-    <div class="flex flex-1 flex-col justify-center">
+    <div
+      class="flex flex-1 flex-col justify-center"
+      transition:animate={fade({ duration: "500ms" })}
+    >
       <h3 class="font-heading text-3xl font-bold 2xl:text-3xl">
         {t("home.featured.projects")}
       </h3>
       <div class="flex flex-1 flex-row space-x-6">
         <div class="flex w-[33%] flex-col">
-          <h5 class="text-xl font-bold text-accent">>luiznormanha.dev_</h5>
+          <h5 class="text-xl font-bold text-accent">luiznormanha.dev_</h5>
           <p>
             Personal portfolio made using Figma and Astro for learning purposes.
           </p>
         </div>
         <div class="flex w-[33%] flex-col">
-          <h5 class="text-xl font-bold text-accent">>Negotiation 7.0 App_</h5>
+          <h5 class="text-xl font-bold text-accent">Negotiation 7.0 App_</h5>
           <p>
             App for the Negotiation 7.0 methodology for negotiations made using
             React Native.
@@ -113,7 +118,10 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
   <section class="flex w-full flex-1 flex-row">
-    <div class="flex flex-1 flex-col">
+    <div
+      class="flex flex-1 flex-col"
+      transition:animate={fade({ duration: "500ms" })}
+    >
       <h3 class="font-heading text-2xl font-bold 2xl:text-3xl">
         {t("home.featured.articles")}
       </h3>
@@ -128,5 +136,3 @@ const translatePath = useTranslatedPath(lang);
     </div>
   </section>
 </FixedLayout>
-
-<style></style>

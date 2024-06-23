@@ -101,5 +101,28 @@ module.exports = {
   plugins: [require("tailwindcss-animate"), require("daisyui")],
   daisyui: {
     logs: false,
-  }
+    themes: [
+      {
+        lnormanha_theme: {
+          primary: "#24FF7F",
+
+          secondary: "#2C7249",
+
+          accent: "#5ED48F",
+
+          neutral: "#050706",
+
+          "base-100": "#151E1A",
+
+          info: "#24FF7F",
+
+          success: "#16a34a",
+
+          warning: "#00ff00",
+
+          error: "#ff0000",
+        },
+      },
+    ],
+  },
 };

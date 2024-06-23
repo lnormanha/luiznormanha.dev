@@ -22,11 +22,11 @@ const toolsEn = [{
   ]
 },
 {
-  title: 'Coding',
+  title: 'Programming',
   tools: [
     {
       name: "NeoVim",
-      description: "Hyperextensible Vim-based text editor. If you use Vim, you'll probably like it. I choose LazyVim as my starting point to avoid too much time ricing my NeoVim config.",
+      description: "My main text editor, previously I used Helix as my first text editor migrating from VSCode, and now I'm using it with the LazyVim config.",
     },
     {
       name: "VSCode",
@@ -100,7 +100,7 @@ const toolsPtBr = [
     tools: [
       {
         name: 'EndeavourOS',
-        description: "Basicamente Arch Linux com um ótimo instalador para pessoas que não sabem muito sobre o Arch Linux, mas com todos os benefícios de um Arch Linux. Ele é meu OS princípal por quase 2 anos."
+        description: "Basicamente Arch Linux com um ótimo instalador para pessoas que não sabem muito sobre o Arch Linux, mas com todos os benefícios de um Arch Linux."
       },
       {
         name: "Awesome WM",
@@ -113,15 +113,15 @@ const toolsPtBr = [
     tools: [
       {
         name: "NeoVim",
-        description: "Editor de texto baseado em Vim altamente extensível. Se você usa Vim, você provavelmente vai gostar dele. Eu escolhi LazyVim como minha primeira escolha para evitar muito tempo customizando minha config do NeoVim.",
+        description: "Meu editor de texto princípal para programar, anteriormente usava o Helix como primeiro editor migrando do VSCode, e agora o estou usando com configuração do LazyVim.",
       },
       {
         name: "VSCode",
-        description: "Utilizo ocasionalmente quando eu precise resolver conflitos de merge mais complexos."
+        description: "Utilizo ocasionalmente quando eu preciso resolver conflitos de merge mais complexos."
       },
       {
         name: 'lazygit',
-        description: "GIT UI para o terminal. Como eu passo mais tempo no terminal e uso os atalhos do Vim, ele é muito intuitivo e rápido para usar."
+        description: "GIT UI para o terminal. Como eu passo mais tempo no terminal e uso os atalhos do Vim, ele é muito intuitivo e rápido de se usar."
       }
     ]
   },
@@ -130,7 +130,7 @@ const toolsPtBr = [
     tools: [
       {
         name: 'kitty',
-        description: 'Emuladot de terminal baseado na GPU, com uma grande variedade de opções de customização.'
+        description: 'Emulador de terminal baseado na GPU, com uma grande variedade de opções de customização.'
       },
       {
         name: 'zsh',
@@ -146,7 +146,7 @@ const toolsPtBr = [
       },
       {
         name: 'zoxide',
-        description: 'Comando de cd mais inteligente. Ele consegue guardar quais lugares você acessou anteriormente no terminal, e com isso não é necessário digitar todo o diretorio novamente.',
+        description: 'Comando de cd mais inteligente. Ele consegue guardar quais lugares você acessou anteriormente no terminal, e com isso não é necessário digitar todo o diretório novamente.',
       },
       {
         name: 'yazi',
@@ -154,7 +154,7 @@ const toolsPtBr = [
       },
       {
         name: 'fzf',
-        description: 'Fuzzy finder para a linha de comando. Eu uso quando eu preciso realizar buscar via terminal e ele integra outros apps que eu uso no terminal como NeoVim e tmux.'
+        description: 'Fuzzy finder para a linha de comando. Eu uso quando eu preciso realizar buscar via terminal e ele integra em outros apps que eu uso no terminal como NeoVim e tmux.'
       }
     ]
   },
@@ -163,7 +163,7 @@ const toolsPtBr = [
     tools: [
       {
         name: "Obsidian",
-        description: 'Aplicativo de anotações baseado em Markdown. Eu uso para gerenciamento e organização pessoal, e também posso acessar meu vault com o NeoVim caso eu precise checar alguma anotação com o plugin Obsidian.nvim.'
+        description: 'Aplicativo de anotações baseado em Markdown. Eu uso para gerenciamento e organização pessoal, e também posso acessar meu vault com o NeoVim caso eu precise checar alguma anotação rapidamente via terminal, com o plugin Obsidian.nvim.'
       },
       {
         name: 'Figma',

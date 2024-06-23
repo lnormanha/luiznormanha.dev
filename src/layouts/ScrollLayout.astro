@@ -22,19 +22,15 @@ import { getLangFromUrl } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang={lang}>
+<html lang={lang} data-theme="luiznormanha_theme">
   <head>
     <MainHead title={title} description={description} />
     <ViewTransitions />
   </head>
   <body class="flex flex-1 items-center justify-center px-4">
-    <div
-      class="flex h-[100vw] flex-1 flex-col items-center justify-between bg-background"
-    >
+    <div class="flex flex-1 flex-col items-center bg-background">
       <Navbar />
-      <div
-        class="flex h-full w-[80%] flex-1 flex-col xl:space-y-2 2xl:space-y-8"
-      >
+      <div class="flex w-[80%] flex-col py-4 xl:space-y-2 2xl:space-y-8">
         <slot />
       </div>
       <Footer />

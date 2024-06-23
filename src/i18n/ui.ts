@@ -6,6 +6,8 @@ export const languages = {
 export const defaultLang = "en";
 
 export const englishTranslation = {
+  "navbar.about": "About",
+  "navbar.tools": "Tools",
   "home.title": "Hi, I'm Luiz Normanha",
   "home.description":
     "I’m a Software Developer with a passion for learning and developing new things, and have fun doing so. ",
@@ -26,7 +28,10 @@ export const englishTranslation = {
   'tools.title': "Tools and Apps",
   'tools.description': 'Tools and apps that I use on my work and personal projects. I like to share them with others, so I list them all here for ease of access.'
 };
+
 export const portugueseTranslation = {
+  "navbar.about": "Sobre",
+  "navbar.tools": "Ferramentas",
   "home.title": "Olá, eu sou o Luiz Normanha",
   "home.description":
     "Eu sou um Desenvolvedor de Software com uma paixão de aprender e desenvolver novas coisas, e me divertir fazendo isso.",
@@ -46,10 +51,10 @@ export const portugueseTranslation = {
   "about.career": "Carreira",
   'tools.title': "Ferramentas e Aplicativos",
   'tools.description': 'Aplicativos e ferramentas que e uso no meu trabalho e projetos pessoais. Eu gosto de compartilhar eles com os outros, então eu listo todos aqui para facilitar o acesso.'
-
 };
 
 export const showDefaultLang = false;
+
 
 export const ui = {
   en: englishTranslation,
