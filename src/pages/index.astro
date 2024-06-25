@@ -8,11 +8,14 @@ import nextIcon from "public/assets/next-icon.png";
 import reactIcon from "public/assets/react-icon.png";
 import tsIcon from "public/assets/ts-icon.png";
 
+import ProjectCard from "@/components/projectCard/ProjectCard.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n/utils";
 import FixedLayout from "@/layouts/FixedLayout.astro";
+import { projects } from "@/static/content/projects";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatedProjects = projects[lang];
 ---
 
 <FixedLayout>
@@ -101,19 +104,15 @@ const t = useTranslations(lang);
         {t("home.featured.projects")}
       </h3>
       <div class="flex flex-1 flex-row space-x-6">
-        <div class="flex w-[33%] flex-col">
-          <h5 class="text-xl font-bold text-accent">luiznormanha.dev_</h5>
-          <p>
-            Personal portfolio made using Figma and Astro for learning purposes.
-          </p>
-        </div>
-        <div class="flex w-[33%] flex-col">
-          <h5 class="text-xl font-bold text-accent">Negotiation 7.0 App_</h5>
-          <p>
-            App for the Negotiation 7.0 methodology for negotiations made using
-            React Native.
-          </p>
-        </div>
+        {
+          translatedProjects.map((project) => (
+            <ProjectCard
+              name={project.name}
+              description={project.description}
+              url={project.url}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
@@ -126,12 +125,7 @@ const t = useTranslations(lang);
         {t("home.featured.articles")}
       </h3>
       <div class="flex flex-1 flex-row space-x-6">
-        <div class="flex w-[25%] flex-col space-y-2">
-          <h5 class="text-md font-bold underline">
-            My 2024 objectives and perspectives
-          </h5>
-          <p>15 Feb 2024 - 6 MIN READ</p>
-        </div>
+        <p class="text-xl">{t("coming.soon")}</p>
       </div>
     </div>
   </section>

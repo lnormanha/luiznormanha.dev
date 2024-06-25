@@ -54,7 +54,7 @@ const jobsPtBr: Job[] = [
     title: "Desenvolvedor FullStack",
     company: "Fleye",
     location: "Rio Grande do Sul, Brasil",
-    period: "Set 2023 - now",
+    period: "Set 2023 - atualmente",
   },
   {
     title: "CEO e Diretor de Tecnologia",

@@ -5,6 +5,9 @@ import gitHubIcon from "public/assets/github-icon.png";
 import linkedinIcon from "public/assets/linkedin-icon.png";
 
 import Icon from "@/components/icon/Icon.astro";
+import { getLangFromUrl } from "@/i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const cvLink = lang === "en" ? "/pdf/cv-en.pdf" : "/pdf/cv-pt_br.pdf";
 ---
 
 <section
@@ -15,7 +18,7 @@ import Icon from "@/components/icon/Icon.astro";
     class="border-secondary-800 flex h-full w-[80%] flex-row items-center justify-center border-t bg-radial-gradient-top from-secondary from-90% to-background to-0%"
   >
     <a
-      href="/"
+      href="https://www.linkedin.com/in/lnormanha"
       class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
       transition:animate={fade({ duration: "500ms" })}
     >
@@ -23,7 +26,7 @@ import Icon from "@/components/icon/Icon.astro";
       <p>LinkedIn</p>
     </a>
     <a
-      href="/"
+      href="https://github.com/lnormanha"
       class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
       transition:animate={fade({ duration: "500ms" })}
     >
@@ -31,7 +34,8 @@ import Icon from "@/components/icon/Icon.astro";
       <p>GitHub</p>
     </a>
     <a
-      href="/"
+      href={cvLink}
+      target="_blank"
       class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
       transition:animate={fade({ duration: "500ms" })}
     >

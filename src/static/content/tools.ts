@@ -17,7 +17,7 @@ const toolsEn = [{
     },
     {
       name: "Awesome WM",
-      description: "Great Window Manager and has a lot of options for customization."
+      description: "Great customizable Tilling Window Manager in Lua. Easy to configure and make it your own."
     },
   ]
 },
@@ -26,7 +26,7 @@ const toolsEn = [{
   tools: [
     {
       name: "NeoVim",
-      description: "My main text editor, previously I used Helix as my first text editor migrating from VSCode, and now I'm using it with the LazyVim config.",
+      description: "My main text editor, previously I used Helix as my first Text Editor migrating from VSCode, and now I'm using it with the LazyVim config.",
     },
     {
       name: "VSCode",
@@ -43,7 +43,7 @@ const toolsEn = [{
   tools: [
     {
       name: 'kitty',
-      description: 'GPU based terminal emulator, with a great variety of customizations.'
+      description: 'GPU based terminal emulator, with a great variety of customization.'
     },
     {
       name: 'zsh',
@@ -51,7 +51,7 @@ const toolsEn = [{
     },
     {
       name: 'Starship',
-      description: 'Cross-shell prompt in Rust. Can be easily integrated in any terminal and has alot of customization possibilities and easy to do so.',
+      description: 'Cross-shell prompt in Rust. Can be easily integrated in any terminal and has alot of customization possibilities and easily configurable',
 
     },
     {
@@ -100,11 +100,11 @@ const toolsPtBr = [
     tools: [
       {
         name: 'EndeavourOS',
-        description: "Basicamente Arch Linux com um ótimo instalador para pessoas que não sabem muito sobre o Arch Linux, mas com todos os benefícios de um Arch Linux."
+        description: "Basicamente Arch Linux com um ótimo instalador para pessoas que não sabem muito sobre o Arch Linux, mas com todos os benefícios de um Arch Linux. Utilizo como meu OS príncipal por cerca de 2 anos."
       },
       {
         name: "Awesome WM",
-        description: "Ótimo gerenciador de janelas e possui uma grande variedade de opções para customização."
+        description: "Um Tilling Window Manager customizável em Lua. Fácil de configurar e deixar do seu jeito."
       },
     ]
   },
@@ -113,7 +113,7 @@ const toolsPtBr = [
     tools: [
       {
         name: "NeoVim",
-        description: "Meu editor de texto princípal para programar, anteriormente usava o Helix como primeiro editor migrando do VSCode, e agora o estou usando com configuração do LazyVim.",
+        description: "Meu editor de texto princípal para programar, anteriormente usava o Helix como primeiro Editor de Texto migrando do VSCode, e agora o estou usando com configuração do LazyVim.",
       },
       {
         name: "VSCode",

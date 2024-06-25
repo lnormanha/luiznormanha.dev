@@ -1,0 +1,15 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+}
+const { name, description, url } = Astro.props;
+---
+
+<div class="flex w-[33%] flex-col">
+  <a class="text-xl font-bold text-accent" href={url}
+    >{name}<span class="animate-ping font-bold"> _</span></a
+  >
+  <p>{description}</p>
+</div>

@@ -44,7 +44,9 @@ const translatedJobs = jobs[lang];
     class="flex w-full flex-col"
     transition:animate={fade({ duration: "500ms" })}
   >
-    <h2 class="mb-4 font-heading text-4xl font-bold 2xl:text-3xl">Career</h2>
+    <h2 class="mb-4 font-heading text-4xl font-bold 2xl:text-3xl">
+      {t("about.career")}
+    </h2>
     <div class="flex flex-col space-y-6">
       {translatedJobs.map((job) => <JobInfo {...job} />)}
     </div>

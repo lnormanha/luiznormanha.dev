@@ -2,7 +2,7 @@
   "name": "luiznormanha.dev",
   "type": "module",
   "description": "Portfolio site for Luiz Normanha.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
