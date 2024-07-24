@@ -7,8 +7,8 @@ interface Props {
 const { name, description, url } = Astro.props;
 ---
 
-<div class="flex w-[33%] flex-col">
-  <a class="text-xl font-bold text-accent" href={url}
+<div class="flex w-full flex-col md:w-[33%]">
+  <a class="text-lg font-bold text-accent md:text-xl" href={url}
     >{name}<span class="animate-ping font-bold"> _</span></a
   >
   <p>{description}</p>

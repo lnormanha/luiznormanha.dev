@@ -29,11 +29,11 @@ const lang = getLangFromUrl(Astro.url);
   </head>
   <body class="flex flex-1 items-center justify-center px-4">
     <div
-      class=`flex h-[100vh] max-h-[100vh] flex-1 flex-col items-center justify-between bg-background`
+      class=`flex md:h-[100vh] md:max-h-[100vh] flex-1 flex-col items-center justify-between bg-background`
     >
       <Navbar />
       <div
-        class="flex h-full w-[80%] flex-1 flex-col items-center justify-center xl:space-y-2 2xl:space-y-8"
+        class="flex h-full w-[80%] flex-1 flex-col items-center justify-center space-y-2 2xl:space-y-8"
       >
         <slot />
       </div>

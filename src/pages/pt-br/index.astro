@@ -21,13 +21,15 @@ const translatedProjects = projects[lang];
 <FixedLayout>
   <section class="flex w-full flex-1 flex-col">
     <div
-      class="flex flex-[0.5] flex-col justify-center"
+      class="flex flex-1 flex-col justify-center md:flex-[0.5]"
       transition:animate={fade({ duration: "500ms" })}
     >
-      <h1 class="font-heading text-4xl font-bold 2xl:text-5xl">
+      <h1
+        class="text-center font-heading text-3xl font-bold md:text-start md:text-4xl 2xl:text-5xl"
+      >
         {t("home.title")}
       </h1>
-      <div class="w-[50%] space-y-4 2xl:w-[30%]">
+      <div class="space-y-4 text-center md:w-[50%] md:text-start 2xl:w-[30%]">
         <p>
           {t("home.description")}
         </p>
@@ -35,12 +37,12 @@ const translatedProjects = projects[lang];
       </div>
     </div>
   </section>
-  <section class="flex w-full flex-1 flex-row">
+  <section class="flex w-full flex-1 flex-col space-y-4 md:flex-row">
     <div
-      class="flex flex-[0.5] flex-col justify-center"
+      class="flex flex-1 flex-col justify-center md:flex-[0.5]"
       transition:animate={fade({ duration: "500ms" })}
     >
-      <h3 class="font-heading text-3xl font-bold 2xl:text-3xl">
+      <h3 class="font-heading text-xl font-bold md:text-3xl 2xl:text-3xl">
         {t("home.skills.title")}
       </h3>
       <p>
@@ -49,49 +51,49 @@ const translatedProjects = projects[lang];
     </div>
     <div
       transition:animate={fade({ duration: "500ms" })}
-      class="flex w-full flex-[0.5] flex-row items-center justify-end space-x-4"
+      class="flex w-full flex-1 flex-row items-center justify-center space-x-4 md:flex-[0.5] md:justify-end"
     >
       <Image
         src={reactIcon}
         alt="LN Dev Logo"
         decoding="async"
         loading="lazy"
-        class="h-14 w-14 object-contain"
+        class="h-8 w-8 object-contain md:h-14 md:w-14"
       />
       <Image
         src={nextIcon}
         alt="LN Dev Logo"
         decoding="async"
         loading="lazy"
-        class="h-14 w-14 object-contain"
+        class="h-8 w-8 object-contain md:h-14 md:w-14"
       />
       <Image
         src={jsIcon}
         alt="LN Dev Logo"
         decoding="async"
         loading="lazy"
-        class="h-14 w-14 object-contain"
+        class="h-8 w-8 object-contain md:h-14 md:w-14"
       />
       <Image
         src={tsIcon}
         alt="LN Dev Logo"
         decoding="async"
         loading="lazy"
-        class="h-14 w-14 object-contain"
+        class="h-8 w-8 object-contain md:h-14 md:w-14"
       />
       <Image
         src={figmaIcon}
         alt="LN Dev Logo"
         decoding="async"
         loading="lazy"
-        class="h-14 w-14 object-contain"
+        class="h-8 w-8 object-contain md:h-14 md:w-14"
       />
       <Image
         src={goIcon}
         alt="LN Dev Logo"
         decoding="async"
         loading="lazy"
-        class="h-14 w-14 object-contain"
+        class="h-8 w-8 object-contain md:h-14 md:w-14"
       />
     </div>
   </section>
@@ -100,10 +102,10 @@ const translatedProjects = projects[lang];
       class="flex flex-1 flex-col justify-center"
       transition:animate={fade({ duration: "500ms" })}
     >
-      <h3 class="font-heading text-3xl font-bold 2xl:text-3xl">
+      <h3 class="font-heading text-xl font-bold md:text-3xl 2xl:text-3xl">
         {t("home.featured.projects")}
       </h3>
-      <div class="flex flex-1 flex-row space-x-6">
+      <div class="flex flex-1 flex-col space-y-4 md:flex-row md:space-x-6">
         {
           translatedProjects.map((project) => (
             <ProjectCard
@@ -121,7 +123,7 @@ const translatedProjects = projects[lang];
       class="flex flex-1 flex-col"
       transition:animate={fade({ duration: "500ms" })}
     >
-      <h3 class="font-heading text-2xl font-bold 2xl:text-3xl">
+      <h3 class="font-heading text-xl font-bold md:text-3xl 2xl:text-3xl">
         {t("home.featured.articles")}
       </h3>
       <div class="flex flex-1 flex-row space-x-6">
