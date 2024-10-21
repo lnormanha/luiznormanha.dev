@@ -5,184 +5,206 @@ export interface Tool {
 
 export interface ToolsSection {
   title: string;
-  tools: Tool[]
+  tools: Tool[];
 }
 
-const toolsEn = [{
-  title: 'OS',
-  tools: [
-    {
-      name: 'EndeavourOS',
-      description: "Basically Arch Linux with a very easy to use installer for people that doesn't know too much about Arch Linux, but with all the benefits of Arch Linux. It has been my daily driver for nearly 2 years now."
-    },
-    {
-      name: "Awesome WM",
-      description: "Great customizable Tilling Window Manager in Lua. Easy to configure and make it your own."
-    },
-  ]
-},
-{
-  title: 'Programming',
-  tools: [
-    {
-      name: "NeoVim",
-      description: "My main text editor, previously I used Helix as my first Text Editor migrating from VSCode, and now I'm using it with the LazyVim config.",
-    },
-    {
-      name: "VSCode",
-      description: "I use occasionally when I need to resolve more complex merge conflicts."
-    },
-    {
-      name: 'lazygit',
-      description: "GIT UI for the terminal. As I stay more in the terminal, and use Vim bindings, it's really intuitive and fast to use."
-    }
-  ]
-},
-{
-  title: "Terminal",
-  tools: [
-    {
-      name: 'kitty',
-      description: 'GPU based terminal emulator, with a great variety of customization.'
-    },
-    {
-      name: 'zsh',
-      description: 'My main shell, not too much to say here, but I love it.'
-    },
-    {
-      name: 'Starship',
-      description: 'Cross-shell prompt in Rust. Can be easily integrated in any terminal and has alot of customization possibilities and easily configurable',
-
-    },
-    {
-      name: 'tmux',
-      description: 'Terminal multiplexer. This enables to have multiple windows and sessions on the same terminal window. Can’t live without it anymore for work.'
-    },
-    {
-      name: 'zoxide',
-      description: 'Smarter cd command. It can remember what you previously has accessed in the system so you don’t need to type the same directory all over again.',
-    },
-    {
-      name: 'yazi',
-      description: 'A terminal file manager. Very easy to use, has Vim binding so it integrates easily in my workflow when I need to manage files via terminal'
-    },
-    {
-      name: 'fzf',
-      description: 'Command line fuzzy finder. I use it for my fuzzy search when needed and it integrates with alot of the other terminal based apps that I user like NeoVim and tmux.'
-    }
-  ]
-},
-{
-  title: "Apps",
-  tools: [
-    {
-      name: "Obsidian",
-      description: 'A markdown based note taking app. I use it for my personal management and organization, and I can access my vault with NeoVim if I need to check something with the Obsidian.nvim plugin.'
-    },
-    {
-      name: 'Figma',
-      description: 'For creating UX/UI in my personal projects.'
-    },
-    {
-      name: 'Midori',
-      description: 'Firefox based browser with more customization options.',
-    },
-    {
-      name: 'Photopea',
-      description: 'I tried using GIMP but it’s not really intuitive for me. Then I found Photopea that is basically Open Source Photoshop in the browser.'
-    }
-  ]
-}
-]
-const toolsPtBr = [
+const toolsEn = [
   {
-    title: 'OS',
+    title: "OS",
     tools: [
       {
-        name: 'EndeavourOS',
-        description: "Basicamente Arch Linux com um ótimo instalador para pessoas que não sabem muito sobre o Arch Linux, mas com todos os benefícios de um Arch Linux. Utilizo como meu OS príncipal por cerca de 2 anos."
+        name: "EndeavourOS",
+        description:
+          "Arch Linux-based OS with a user-friendly installer. Combines Arch's flexibility with ease of setup. My daily driver for 3 years.",
       },
       {
         name: "Awesome WM",
-        description: "Um Tilling Window Manager customizável em Lua. Fácil de configurar e deixar do seu jeito."
+        description:
+          "Highly customizable tiling window manager written in Lua. Offers efficient workspace management and extensive configuration options.",
       },
-    ]
+    ],
   },
   {
-    title: 'Programação',
+    title: "Programming",
     tools: [
       {
-        name: "NeoVim",
-        description: "Meu editor de texto princípal para programar, anteriormente usava o Helix como primeiro Editor de Texto migrando do VSCode, e agora o estou usando com configuração do LazyVim.",
+        name: "Cursor + VIM Mode",
+        description:
+          "AI-powered code editor with VIM keybindings. Enhances coding efficiency by combining intelligent suggestions with familiar terminal shortcuts.",
       },
       {
-        name: "VSCode",
-        description: "Utilizo ocasionalmente quando eu preciso resolver conflitos de merge mais complexos."
+        name: "lazygit",
+        description:
+          "Terminal UI for Git operations. Streamlines repository management with intuitive Vim-like keybindings, boosting productivity.",
       },
-      {
-        name: 'lazygit',
-        description: "GIT UI para o terminal. Como eu passo mais tempo no terminal e uso os atalhos do Vim, ele é muito intuitivo e rápido de se usar."
-      }
-    ]
+    ],
   },
   {
     title: "Terminal",
     tools: [
       {
-        name: 'kitty',
-        description: 'Emulador de terminal baseado na GPU, com uma grande variedade de opções de customização.'
+        name: "kitty",
+        description:
+          "Fast, feature-rich, GPU-accelerated terminal emulator. Offers extensive customization and excellent performance.",
       },
       {
-        name: 'zsh',
-        description: 'Meu shell principal, não tenho muito a dizer aqui, mas é o meu favorito no momento.'
+        name: "zsh",
+        description:
+          "Powerful shell with advanced features, extensive plugins, and themes. My preferred shell for its flexibility and user-friendly interface.",
       },
       {
-        name: 'Starship',
-        description: 'Prompt Cross-shell em Rust. Pode ser integrado em qualquer terminal e possui várias opções de customização, além de ser muito fácil realizar as customizações',
+        name: "Starship",
+        description:
+          "Cross-shell prompt written in Rust. Easily integrates with any terminal, offering extensive customization options and simple configuration.",
       },
       {
-        name: 'tmux',
-        description: 'Multiplexador de terminal. Isso permite que haja muitas janelas e sessões na mesma instância do terminal. Não consigo ficar sem usar ele no meu dia-a-dia para o trabalho ou programar.',
+        name: "tmux",
+        description:
+          "Terminal multiplexer enabling multiple windows and sessions in a single terminal. Essential for efficient multitasking and remote work.",
       },
       {
-        name: 'zoxide',
-        description: 'Comando de cd mais inteligente. Ele consegue guardar quais lugares você acessou anteriormente no terminal, e com isso não é necessário digitar todo o diretório novamente.',
+        name: "zoxide",
+        description:
+          "Smarter cd command with learning capabilities. Remembers frequently and recently accessed directories, streamlining navigation.",
       },
       {
-        name: 'yazi',
-        description: 'Gerenciador de arquivos no terminal. Fácil de usar e possuí atalhos do Vim, então é bem integrado ao meu fluxo de trabalho quando eu preciso gerenciar meus arquivos via terminal.'
+        name: "yazi",
+        description:
+          "Modern, fast terminal file manager with Vim-like keybindings. Seamlessly integrates into my workflow for efficient file management.",
       },
       {
-        name: 'fzf',
-        description: 'Fuzzy finder para a linha de comando. Eu uso quando eu preciso realizar buscar via terminal e ele integra em outros apps que eu uso no terminal como NeoVim e tmux.'
-      }
-    ]
+        name: "fzf",
+        description:
+          "Versatile command-line fuzzy finder. Enhances searching capabilities and integrates well with other terminal applications like NeoVim and tmux.",
+      },
+    ],
+  },
+  {
+    title: "Apps",
+    tools: [
+      {
+        name: "Obsidian",
+        description:
+          "Powerful, markdown-based note-taking app. Used for personal knowledge management and organization, with VIM bindings for quick note-taking.",
+      },
+      {
+        name: "Figma",
+        description:
+          "Collaborative design tool for creating and prototyping UX/UI in personal projects.",
+      },
+      {
+        name: "ZEN Browser",
+        description:
+          "Firefox-based browser with enhanced customization options. A great alternative for users who enjoy the features of Arc Browser.",
+      },
+      {
+        name: "Photopea",
+        description:
+          "Browser-based image editor with Photoshop-like interface. Powerful, free alternative to desktop editing software.",
+      },
+    ],
+  },
+];
+
+const toolsPtBr = [
+  {
+    title: "OS",
+    tools: [
+      {
+        name: "EndeavourOS",
+        description:
+          "Sistema operacional baseado no Arch Linux com um instalador amigável. Combina a flexibilidade do Arch com facilidade de configuração. Meu sistema principal há 3 anos.",
+      },
+      {
+        name: "Awesome WM",
+        description:
+          "Gerenciador de janelas em mosaico altamente personalizável, escrito em Lua. Oferece gerenciamento eficiente do espaço de trabalho e amplas opções de configuração.",
+      },
+    ],
+  },
+  {
+    title: "Programação",
+    tools: [
+      {
+        name: "Cursor + Modo VIM",
+        description:
+          "Editor de código com IA e atalhos do VIM. Aumenta a eficiência na codificação combinando sugestões inteligentes com atalhos familiares do terminal.",
+      },
+      {
+        name: "lazygit",
+        description:
+          "Interface de usuário terminal para operações Git. Simplifica o gerenciamento de repositórios com atalhos intuitivos semelhantes ao Vim, aumentando a produtividade.",
+      },
+    ],
+  },
+  {
+    title: "Terminal",
+    tools: [
+      {
+        name: "kitty",
+        description:
+          "Emulador de terminal rápido, rico em recursos e acelerado por GPU. Oferece ampla personalização e excelente desempenho.",
+      },
+      {
+        name: "zsh",
+        description:
+          "Shell poderoso com recursos avançados, extensos plugins e temas. Meu shell preferido pela flexibilidade e interface amigável.",
+      },
+      {
+        name: "Starship",
+        description:
+          "Prompt multi-shell escrito em Rust. Integra-se facilmente a qualquer terminal, oferecendo extensas opções de personalização e configuração simples.",
+      },
+      {
+        name: "tmux",
+        description:
+          "Multiplexador de terminal que permite múltiplas janelas e sessões em um único terminal. Essencial para multitarefa eficiente e trabalho remoto.",
+      },
+      {
+        name: "zoxide",
+        description:
+          "Comando cd mais inteligente com capacidade de aprendizado. Lembra diretórios acessados frequente e recentemente, agilizando a navegação.",
+      },
+      {
+        name: "yazi",
+        description:
+          "Gerenciador de arquivos moderno e rápido para terminal com atalhos similares ao Vim. Integra-se perfeitamente ao meu fluxo de trabalho para gerenciamento eficiente de arquivos.",
+      },
+      {
+        name: "fzf",
+        description:
+          "Localizador fuzzy versátil para linha de comando. Melhora as capacidades de busca e integra-se bem com outros aplicativos de terminal como NeoVim e tmux.",
+      },
+    ],
   },
   {
     title: "Aplicativos",
     tools: [
       {
         name: "Obsidian",
-        description: 'Aplicativo de anotações baseado em Markdown. Eu uso para gerenciamento e organização pessoal, e também posso acessar meu vault com o NeoVim caso eu precise checar alguma anotação rapidamente via terminal, com o plugin Obsidian.nvim.'
+        description:
+          "Aplicativo poderoso de anotações baseado em Markdown. Usado para gerenciamento e organização do conhecimento pessoal, com atalhos do VIM para criar notas rapidamente.",
       },
       {
-        name: 'Figma',
-        description: 'Para criação de UX/UI nos meus projetos pessoais.'
+        name: "Figma",
+        description:
+          "Ferramenta de design colaborativo para criar e prototipar UX/UI em projetos pessoais.",
       },
       {
-        name: 'Midori',
-        description: 'Navegador baseado em Firefox com mais opções de customização.',
+        name: "ZEN Browser",
+        description:
+          "Navegador baseado no Firefox com opções de personalização aprimoradas. Uma ótima alternativa para usuários que gostam dos recursos do Arc Browser.",
       },
       {
-        name: 'Photopea',
-        description: 'Eu tentei usar GIMP mas não foi muito intuitivo para mim, então eu encontrei o Photopea que é basicamente um Photoshop no navegador.'
-      }
-    ]
-  }
-]
-
+        name: "Photopea",
+        description:
+          "Editor de imagens no navegador com interface similar ao Photoshop. Alternativa gratuita e poderosa aos softwares de edição desktop.",
+      },
+    ],
+  },
+];
 
 export const tools = {
   en: toolsEn,
-  'pt-br': toolsPtBr
-}
+  "pt-br": toolsPtBr,
+};

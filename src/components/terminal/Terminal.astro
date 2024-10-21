@@ -1,0 +1,61 @@
+---
+import { Image } from "astro:assets";
+import { fade } from "astro:transitions";
+import logo from "public/assets/LN_Logo_Transparent.svg";
+
+const { lang } = Astro.props;
+---
+
+<div
+  class="terminal-container relative h-48 w-full max-w-full overflow-hidden rounded-xl border border-primary bg-background p-4 font-mono text-xs text-green-400 shadow-lg shadow-primary/20 sm:h-64 sm:text-sm md:max-w-2xl"
+  transition:animate={fade({ duration: "500ms" })}
+  data-lang={lang}
+>
+  <div class="terminal-header mb-2 flex items-center justify-end">
+    <div class="text-xs text-gray-500">zsh</div>
+  </div>
+  <div
+    id="terminal-content"
+    class="terminal-content relative z-10 h-[calc(100%-28px)] overflow-y-auto whitespace-pre-wrap"
+  >
+  </div>
+  <div class="absolute bottom-4 right-4 z-0 opacity-10">
+    <Image
+      src={logo}
+      alt="LN Dev Logo"
+      decoding="async"
+      loading="lazy"
+      class="h-24 w-24"
+    />
+  </div>
+</div>
+
+<script>
+  import { initializeTerminal } from "./terminalLogic";
+
+  // Initialize terminal on load
+  document.addEventListener("astro:page-load", () => {
+    const terminalContainer = document.querySelector(
+      ".terminal-container",
+    ) as HTMLElement;
+    const lang = terminalContainer.dataset.lang || "en";
+    console.log({ lang });
+    initializeTerminal(lang);
+  });
+
+  // Reinitialize terminal when language changes
+  document.addEventListener("astro:after-swap", () => {
+    const terminalContainer = document.querySelector(
+      ".terminal-container",
+    ) as HTMLElement;
+    const lang = terminalContainer.dataset.lang || "en";
+    console.log({ lang });
+    initializeTerminal(lang);
+  });
+</script>
+
+<style>
+  .opacity-0 {
+    opacity: 0;
+  }
+</style>

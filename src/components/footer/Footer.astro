@@ -10,38 +10,34 @@ const lang = getLangFromUrl(Astro.url);
 const cvLink = lang === "en" ? "/pdf/cv-en.pdf" : "/pdf/cv-pt_br.pdf";
 ---
 
-<section
-  class="flex max-h-20 w-full flex-1 flex-row items-center justify-between bg-background"
+<footer
+  class="mt-4 w-full bg-background"
+  transition:animate={fade({ duration: "500ms" })}
 >
-  <div class="flex h-20 w-20 flex-col items-center justify-center"></div>
   <div
-    class="border-secondary-800 flex h-full w-[80%] flex-row items-center justify-center border-t bg-radial-gradient-top from-secondary from-90% to-background to-0%"
+    class="border-secondary-800 flex flex-row items-center justify-center border-t bg-radial-gradient-top from-secondary from-0% to-background to-90% py-4 sm:py-0"
   >
     <a
       href="https://www.linkedin.com/in/lnormanha"
-      class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
-      transition:animate={fade({ duration: "500ms" })}
+      class="btn btn-ghost flex flex-row items-center justify-center px-4 py-2 font-heading hover:bg-primary/10 sm:px-6"
     >
       <Icon icon={linkedinIcon} />
-      <p>LinkedIn</p>
+      <span class="ml-2 text-sm sm:text-base">LinkedIn</span>
     </a>
     <a
       href="https://github.com/lnormanha"
-      class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
-      transition:animate={fade({ duration: "500ms" })}
+      class="btn btn-ghost flex flex-row items-center justify-center px-4 py-2 font-heading hover:bg-primary/10 sm:px-6"
     >
       <Icon icon={gitHubIcon} />
-      <p>GitHub</p>
+      <span class="ml-2 text-sm sm:text-base">GitHub</span>
     </a>
     <a
       href={cvLink}
       target="_blank"
-      class="btn btn-ghost flex flex-row items-center justify-center font-heading hover:bg-primary/10"
-      transition:animate={fade({ duration: "500ms" })}
+      class="btn btn-ghost flex flex-row items-center justify-center px-4 py-2 font-heading hover:bg-primary/10 sm:px-6"
     >
       <Icon icon={cvIcon} />
-      <p>CV</p>
+      <span class="ml-2 text-sm sm:text-base">CV</span>
     </a>
   </div>
-  <div class="flex h-20 w-20 flex-col items-center justify-center"></div>
-</section>
+</footer>

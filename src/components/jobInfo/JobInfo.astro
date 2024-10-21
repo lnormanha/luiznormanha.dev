@@ -8,8 +8,10 @@ interface Props {
 const { title, company, location, period } = Astro.props;
 ---
 
-<div class="flex flex-col space-y-2">
-  <h3 class="font-heading text-xl font-bold">{title}</h3>
-  <h4 class="text-md font-heading font-semibold">{company} | {location}</h4>
-  <p class="text-md">{period}</p>
+<div class="flex flex-col space-y-2 sm:space-y-3">
+  <h3 class="font-heading text-lg font-bold sm:text-xl">{title}</h3>
+  <h4 class="font-heading text-sm font-semibold sm:text-base">
+    {company} | {location}
+  </h4>
+  <p class="text-xs sm:text-sm">{period}</p>
 </div>

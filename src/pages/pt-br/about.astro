@@ -15,38 +15,42 @@ const translatedJobs = jobs[lang];
 
 <ScrollLayout>
   <section
-    class="flex w-full flex-col"
+    class="flex w-full flex-col space-y-4 px-4 sm:px-0"
     transition:animate={fade({ duration: "500ms" })}
   >
-    <h1 class="font-heading text-4xl font-bold 2xl:text-4xl">
+    <h1
+      class="text-center font-heading text-3xl font-bold sm:text-left sm:text-4xl"
+    >
       {t("about.title")}
     </h1>
-    <div class="flex">
-      <div class="flex flex-[0.4] flex-col">
+    <div class="flex flex-col sm:flex-row">
+      <div
+        class="mb-4 flex justify-center sm:mb-0 sm:flex-[0.4] sm:justify-start"
+      >
         <Image
           src={profile}
           alt="LN Profile"
           decoding="async"
           loading="lazy"
-          class="h-80 w-80 object-contain"
+          class="h-64 w-64 object-contain sm:h-80 sm:w-80"
         />
       </div>
-      <div class="flex flex-[0.6] flex-col justify-center space-y-6">
+      <div
+        class="flex flex-col space-y-4 sm:flex-[0.6] sm:justify-center sm:space-y-6"
+      >
         {
           (t("about.description") as string[]).map((description: string) => (
-            <p>{description}</p>
+            <p class="text-sm sm:text-base">{description}</p>
           ))
         }
       </div>
     </div>
   </section>
   <section
-    class="flex w-full flex-col"
+    class="mt-8 flex w-full flex-col space-y-4 px-4 sm:mt-12 sm:px-0"
     transition:animate={fade({ duration: "500ms" })}
   >
-    <h2 class="mb-4 font-heading text-4xl font-bold 2xl:text-3xl">
-      {t("about.career")}
-    </h2>
+    <h2 class="font-heading text-2xl font-bold sm:text-3xl">Career</h2>
     <div class="flex flex-col space-y-6">
       {translatedJobs.map((job) => <JobInfo {...job} />)}
     </div>
